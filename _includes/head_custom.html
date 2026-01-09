@@ -62,22 +62,116 @@
   }
 
   .nav-footer a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    padding: 8px 16px;
     color: #0969da;
     text-decoration: none;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    background: #f6f8fa;
+    font-size: 14px;
   }
 
   .nav-footer a:hover {
-    text-decoration: underline;
+    background: #0969da;
+    color: white;
+    border-color: #0969da;
+  }
+
+  .nav-footer .prev::before {
+    content: "← ";
+  }
+
+  .nav-footer .next::after {
+    content: " →";
+  }
+
+  .nav-footer .spacer {
+    flex: 1;
   }
 </style>
 
 <!-- Mermaid 다이어그램 지원 -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: 'default'
+  document.addEventListener('DOMContentLoaded', function() {
+    // code.language-mermaid 블록을 div.mermaid로 변환
+    document.querySelectorAll('code.language-mermaid').forEach(function(codeBlock) {
+      var pre = codeBlock.parentNode;
+      var div = document.createElement('div');
+      div.className = 'mermaid';
+      div.textContent = codeBlock.textContent;
+      pre.parentNode.replaceChild(div, pre);
+    });
+
+    // Mermaid 초기화 및 렌더링
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'default'
+    });
+    mermaid.run();
+
+    // 이전/다음 네비게이션 생성
+    createPrevNextNav();
   });
+
+  function createPrevNextNav() {
+    // 사이드바에서 모든 네비게이션 링크 수집
+    var navLinks = [];
+    document.querySelectorAll('.nav-list-item a.nav-list-link').forEach(function(link) {
+      navLinks.push({
+        href: link.getAttribute('href'),
+        title: link.textContent.trim()
+      });
+    });
+
+    if (navLinks.length === 0) return;
+
+    // 현재 페이지 찾기
+    var currentPath = window.location.pathname;
+    var currentIndex = -1;
+    for (var i = 0; i < navLinks.length; i++) {
+      if (navLinks[i].href === currentPath ||
+          currentPath.endsWith(navLinks[i].href) ||
+          navLinks[i].href.endsWith(currentPath.replace(/\/$/, ''))) {
+        currentIndex = i;
+        break;
+      }
+    }
+
+    if (currentIndex === -1) return;
+
+    // 네비게이션 요소 생성
+    var nav = document.createElement('nav');
+    nav.className = 'nav-footer';
+
+    if (currentIndex > 0) {
+      var prev = navLinks[currentIndex - 1];
+      var prevLink = document.createElement('a');
+      prevLink.href = prev.href;
+      prevLink.className = 'prev';
+      prevLink.textContent = prev.title;
+      nav.appendChild(prevLink);
+    } else {
+      nav.appendChild(document.createElement('span'));
+    }
+
+    var spacer = document.createElement('span');
+    spacer.className = 'spacer';
+    nav.appendChild(spacer);
+
+    if (currentIndex < navLinks.length - 1) {
+      var next = navLinks[currentIndex + 1];
+      var nextLink = document.createElement('a');
+      nextLink.href = next.href;
+      nextLink.className = 'next';
+      nextLink.textContent = next.title;
+      nav.appendChild(nextLink);
+    }
+
+    // 메인 컨텐츠 영역에 추가
+    var mainContent = document.querySelector('.main-content') || document.querySelector('main') || document.body;
+    mainContent.appendChild(nav);
+  }
 </script>
