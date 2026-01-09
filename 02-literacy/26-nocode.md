@@ -19,10 +19,15 @@ API는 프로그램들이 서로 대화하는 방법입니다.
 
 ```mermaid
 flowchart LR
-    A[손님] -->|주문| B[웨이터]
-    B -->|요청| C[주방]
-    C -->|완성| B
-    B -->|전달| A
+    subgraph Request[요청]
+        A[손님] -->|스테이크 주세요| B["웨이터 (API)"]
+        B -->|스테이크 1개 요청| C["주방 (서비스)"]
+    end
+    subgraph Response[응답]
+        C2[주방] -->|스테이크 완성| B2[웨이터]
+        B2 -->|여기 스테이크요| A2[손님]
+    end
+    C -.-> C2
 ```
 
 *Figure 26-1. API 비유: 손님 → 웨이터 → 주방*
@@ -39,9 +44,23 @@ flowchart LR
 웹훅은 "일이 생기면 알려줘"입니다.
 
 ```mermaid
-flowchart LR
-    P["폴링: 반복 질문 (비효율)"]
-    W["웹훅: 알림 대기 (효율)"]
+flowchart TB
+    subgraph Polling[API 방식 - 폴링]
+        A1["나: 택배 왔어요?"] --> B1["배송기사: 아직요"]
+        B1 --> A2["나: 택배 왔어요?"]
+        A2 --> B2["배송기사: 아직요"]
+        B2 --> A3["나: 택배 왔어요?"]
+        A3 --> B3["배송기사: 네, 방금 왔어요"]
+    end
+
+    subgraph Push[웹훅 방식 - 푸시]
+        C1["나: 택배 오면 문자 주세요"] --> D1["배송기사: 알겠습니다"]
+        D1 -.->|시간 경과| D2["배송기사: 택배 도착했습니다"]
+        D2 --> C2[나]
+    end
+
+    style Polling fill:#FFCCCC
+    style Push fill:#D4EDDA
 ```
 
 *Figure 26-2. 폴링(반복 질문) vs 웹훅(알림)*

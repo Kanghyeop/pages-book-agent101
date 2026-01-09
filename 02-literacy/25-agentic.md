@@ -27,9 +27,23 @@ parent: Part 2
 
 ```mermaid
 flowchart LR
-    S["어시스턴트: Q→A"]
-    A["에이전틱: Q→계획→실행→A"]
-    F["에이전트: 목표→자율실행"]
+    subgraph Simple[단순 어시스턴트]
+        A1[Q] --> A2[A]
+    end
+
+    subgraph Agentic[에이전틱]
+        B1[Q] --> B2[계획]
+        B2 --> B3[실행]
+        B3 --> B4[A]
+    end
+
+    subgraph FullAgent[완전 에이전트]
+        C1[목표] --> C2[자율실행]
+    end
+
+    style Simple fill:#F5F5F5
+    style Agentic fill:#FFF3CD
+    style FullAgent fill:#D4EDDA
 ```
 
 *Figure 25-1. 단순 어시스턴트 → 에이전틱 → 완전 에이전트*

@@ -134,10 +134,41 @@ ChatGPT와의 차이:
 Claude Code는 세 가지 모드로 작동할 수 있습니다:
 
 ```mermaid
-flowchart LR
-    N["일반: 작업→승인 반복"]
-    A["Auto: 위험할 때만 승인"]
-    P["Plan: 계획→승인→실행"]
+flowchart TD
+    Start[작업 시작] --> Mode{모드 선택}
+
+    Mode -->|일반 모드| Normal[매번 승인 요청]
+    Mode -->|Auto-accept| Auto[자동 승인]
+    Mode -->|Plan 모드| Plan[계획 수립]
+
+    Normal --> Task1[작업 1]
+    Task1 --> Approve1["승인 대기 ⏸"]
+    Approve1 --> Task2[작업 2]
+    Task2 --> Approve2["승인 대기 ⏸"]
+    Approve2 --> Task3[작업 3]
+    Task3 --> Approve3["승인 대기 ⏸"]
+
+    Auto --> AutoTask1[작업 1 자동 실행]
+    AutoTask1 --> AutoTask2[작업 2 자동 실행]
+    AutoTask2 --> Critical{위험한 작업?}
+    Critical -->|Yes| ApproveAuto["승인 요청 ⏸"]
+    Critical -->|No| AutoTask3[작업 3 자동 실행]
+
+    Plan --> Explore[Phase 1: 탐색]
+    Explore --> Design[Phase 2: 설계]
+    Design --> Review[Phase 3: 계획 검토]
+    Review --> UserApprove["사용자 승인 ⏸"]
+    UserApprove --> Execute[Phase 4: 일괄 실행]
+    Execute --> Confirm[중요 결정만 컨펌]
+
+    style Normal fill:#FFEBEE
+    style Auto fill:#FFF3CD
+    style Plan fill:#D4EDDA
+    style Approve1 fill:#ff5252
+    style Approve2 fill:#ff5252
+    style Approve3 fill:#ff5252
+    style ApproveAuto fill:#ff9800
+    style UserApprove fill:#4caf50
 ```
 
 *Figure 24-3. 세 가지 모드 비교: 승인 빈도와 타이밍*
@@ -164,14 +195,40 @@ Plan 모드:
 Plan 모드는 계획과 실행을 분리합니다. 이는 극단적인 시나리오도 가능하게 만듭니다:
 
 ```mermaid
-flowchart LR
-    U[User] -->|1.Request| P[Planner]
-    P -->|2.Plan| U
-    U -->|3.Revise| P
-    P -->|4.Updated| U
-    U -->|5.Approve| P
-    P -->|6.Execute| E[Executor]
-    E -->|7.Done| U
+sequenceDiagram
+    participant U as 사용자
+    participant P as Planner (계획 모드)
+    participant E as Executor (실행 모드)
+
+    Note over U,E: Day 1: 계획 수립
+    U->>P: "대규모 리팩토링 해줘"
+    P->>P: 코드베이스 탐색 (2시간)
+    P->>P: 아키텍처 분석 (4시간)
+    P->>P: 의존성 파악 (3시간)
+    P->>P: 마이그레이션 전략 수립 (6시간)
+    P->>P: 테스트 계획 작성 (4시간)
+    P->>P: 롤백 전략 수립 (3시간)
+    P->>U: "계획서 완성 (50페이지)"
+
+    Note over U,E: Day 2-29: 사용자 검토 및 논의
+    U->>P: "이 부분 수정해줘"
+    P->>P: 계획 수정 (30분)
+    P->>U: "수정 완료"
+    U->>P: "이 케이스도 고려해줘"
+    P->>P: 계획 보강 (1시간)
+    P->>U: "반영 완료"
+
+    Note over U,E: Day 30: 승인 및 실행
+    U->>P: "승인"
+    P->>E: TodoList 전달
+    E->>E: 작업 1 실행
+    E->>E: 작업 2 실행
+    E->>U: "중요 결정 필요" (컨펌)
+    U->>E: "승인"
+    E->>E: 작업 3~50 실행
+    E->>U: "완료"
+
+    Note over U,E: 총 소요: 30일 (계획 1일 + 검토 28일 + 실행 1일)
 ```
 
 *Figure 24-4. Plan 모드 심층: 계획과 실행의 분리*
@@ -192,10 +249,30 @@ flowchart LR
 ## 6. 권한 요청 구조: 무엇이 위험하고 무엇이 안전한가?
 
 ```mermaid
-flowchart LR
-    S["안전: 자동 실행"]
-    M["민감: 모드별 처리"]
-    D["위험: 승인 필수"]
+flowchart TD
+    Task[작업 요청] --> Check{작업 분류}
+
+    Check -->|읽기 전용| Safe[안전한 작업]
+    Check -->|파일 수정| Medium[민감한 작업]
+    Check -->|시스템 변경| Danger[위험한 작업]
+
+    Safe --> SafeList["• 파일 읽기 • 코드 검색 • 웹 검색 • 정보 조회"]
+    Medium --> MediumList["• 파일 생성/수정 • 설정 변경 • 의존성 설치 • Git 커밋"]
+    Danger --> DangerList["• 파일 삭제 • 시스템 명령 실행 • 외부 API 호출 • 환경 변수 변경"]
+
+    SafeList --> AutoSafe[자동 실행]
+    MediumList --> ModeCheck{모드?}
+    DangerList --> AlwaysAsk[반드시 승인 요청]
+
+    ModeCheck -->|일반 모드| AskMedium[승인 요청]
+    ModeCheck -->|Auto-accept| AutoMedium[자동 승인]
+    ModeCheck -->|Plan 모드 실행 단계| AutoMediumPlan[계획에 포함되면 자동 실행]
+
+    style Safe fill:#D4EDDA
+    style Medium fill:#FFF3CD
+    style Danger fill:#FFEBEE
+    style AutoSafe fill:#4caf50,color:#fff
+    style AlwaysAsk fill:#f44336,color:#fff
 ```
 
 *Figure 24-5. 권한 요청 구조: 안전-민감-위험 분류*
