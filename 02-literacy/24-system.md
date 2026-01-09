@@ -141,34 +141,20 @@ flowchart TD
     Mode -->|Auto-accept| Auto[자동 승인]
     Mode -->|Plan 모드| Plan[계획 수립]
 
-    Normal --> Task1[작업 1]
-    Task1 --> Approve1["승인 대기 ⏸"]
-    Approve1 --> Task2[작업 2]
-    Task2 --> Approve2["승인 대기 ⏸"]
-    Approve2 --> Task3[작업 3]
-    Task3 --> Approve3["승인 대기 ⏸"]
+    Normal --> N1["작업 → 승인 → 작업 → 승인..."]
 
-    Auto --> AutoTask1[작업 1 자동 실행]
-    AutoTask1 --> AutoTask2[작업 2 자동 실행]
-    AutoTask2 --> Critical{위험한 작업?}
-    Critical -->|Yes| ApproveAuto["승인 요청 ⏸"]
-    Critical -->|No| AutoTask3[작업 3 자동 실행]
+    Auto --> A1[대부분 자동 실행]
+    A1 --> A2{위험한 작업?}
+    A2 -->|Yes| A3[승인 요청]
+    A2 -->|No| A4[계속 실행]
 
-    Plan --> Explore[Phase 1: 탐색]
-    Explore --> Design[Phase 2: 설계]
-    Design --> Review[Phase 3: 계획 검토]
-    Review --> UserApprove["사용자 승인 ⏸"]
-    UserApprove --> Execute[Phase 4: 일괄 실행]
-    Execute --> Confirm[중요 결정만 컨펌]
+    Plan --> P1[탐색 → 설계 → 검토]
+    P1 --> P2[사용자 승인]
+    P2 --> P3[일괄 실행]
 
     style Normal fill:#FFEBEE
     style Auto fill:#FFF3CD
     style Plan fill:#D4EDDA
-    style Approve1 fill:#ff5252
-    style Approve2 fill:#ff5252
-    style Approve3 fill:#ff5252
-    style ApproveAuto fill:#ff9800
-    style UserApprove fill:#4caf50
 ```
 
 *Figure 24-3. 세 가지 모드 비교: 승인 빈도와 타이밍*
@@ -196,39 +182,23 @@ Plan 모드는 계획과 실행을 분리합니다. 이는 극단적인 시나�
 
 ```mermaid
 sequenceDiagram
-    participant U as 사용자
-    participant P as Planner (계획 모드)
-    participant E as Executor (실행 모드)
+    participant U as User
+    participant P as Planner
+    participant E as Executor
 
-    Note over U,E: Day 1: 계획 수립
-    U->>P: "대규모 리팩토링 해줘"
-    P->>P: 코드베이스 탐색 (2시간)
-    P->>P: 아키텍처 분석 (4시간)
-    P->>P: 의존성 파악 (3시간)
-    P->>P: 마이그레이션 전략 수립 (6시간)
-    P->>P: 테스트 계획 작성 (4시간)
-    P->>P: 롤백 전략 수립 (3시간)
-    P->>U: "계획서 완성 (50페이지)"
+    Note over U,P: Day 1 - Planning
+    U->>P: Request refactoring
+    P->>P: Analyze codebase
+    P->>U: Plan complete
 
-    Note over U,E: Day 2-29: 사용자 검토 및 논의
-    U->>P: "이 부분 수정해줘"
-    P->>P: 계획 수정 (30분)
-    P->>U: "수정 완료"
-    U->>P: "이 케이스도 고려해줘"
-    P->>P: 계획 보강 (1시간)
-    P->>U: "반영 완료"
+    Note over U,P: Day 2-29 - Review
+    U->>P: Request changes
+    P->>U: Updated
 
-    Note over U,E: Day 30: 승인 및 실행
-    U->>P: "승인"
-    P->>E: TodoList 전달
-    E->>E: 작업 1 실행
-    E->>E: 작업 2 실행
-    E->>U: "중요 결정 필요" (컨펌)
-    U->>E: "승인"
-    E->>E: 작업 3~50 실행
-    E->>U: "완료"
-
-    Note over U,E: 총 소요: 30일 (계획 1일 + 검토 28일 + 실행 1일)
+    Note over U,E: Day 30 - Execution
+    U->>P: Approve
+    P->>E: Execute tasks
+    E->>U: Done
 ```
 
 *Figure 24-4. Plan 모드 심층: 계획과 실행의 분리*
