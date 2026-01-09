@@ -102,7 +102,7 @@ flowchart TB
         CC --> User
         CC -->|Read| FS[파일 시스템]
         CC -->|Write/Edit| FS
-        CC -->|Execute| CMD["명령어 실행<br/>git, npm, python 등"]
+        CC -->|Execute| CMD["명령어 실행 git, npm, python 등"]
         CC -->|Search| Web[웹 검색]
         CC -->|Fetch| API[외부 API]
     end
@@ -256,9 +256,9 @@ flowchart TD
     Check -->|파일 수정| Medium[민감한 작업]
     Check -->|시스템 변경| Danger[위험한 작업]
 
-    Safe --> SafeList["• 파일 읽기<br/>• 코드 검색<br/>• 웹 검색<br/>• 정보 조회"]
-    Medium --> MediumList["• 파일 생성/수정<br/>• 설정 변경<br/>• 의존성 설치<br/>• Git 커밋"]
-    Danger --> DangerList["• 파일 삭제<br/>• 시스템 명령 실행<br/>• 외부 API 호출<br/>• 환경 변수 변경"]
+    Safe --> SafeList["• 파일 읽기 • 코드 검색 • 웹 검색 • 정보 조회"]
+    Medium --> MediumList["• 파일 생성/수정 • 설정 변경 • 의존성 설치 • Git 커밋"]
+    Danger --> DangerList["• 파일 삭제 • 시스템 명령 실행 • 외부 API 호출 • 환경 변수 변경"]
 
     SafeList --> AutoSafe[자동 실행]
     MediumList --> ModeCheck{모드?}
@@ -266,7 +266,7 @@ flowchart TD
 
     ModeCheck -->|일반 모드| AskMedium[승인 요청]
     ModeCheck -->|Auto-accept| AutoMedium[자동 승인]
-    ModeCheck -->|Plan 모드<br/>실행 단계| AutoMediumPlan[계획에 포함되면<br/>자동 실행]
+    ModeCheck -->|Plan 모드 실행 단계| AutoMediumPlan[계획에 포함되면 자동 실행]
 
     style Safe fill:#D4EDDA
     style Medium fill:#FFF3CD

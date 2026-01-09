@@ -30,7 +30,7 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-    A[GPT / Claude<br/>범용 모델] --> B[번역]
+    A[GPT / Claude 범용 모델] --> B[번역]
     A --> C[요약]
     A --> D[코딩]
 
@@ -92,8 +92,8 @@ AI 제품을 이해한다는 것은 Task 그래프를 읽는다는 뜻입니다.
 
 ```mermaid
 flowchart LR
-    A[영상] --> B[STT<br/>Whisper]
-    B --> C[번역<br/>GPT / NLLB]
+    A[영상] --> B[STT Whisper]
+    B --> C[번역 GPT / NLLB]
     C --> D[자막 파일]
 
     style B fill:#D4EDDA,stroke:#DDDDDD

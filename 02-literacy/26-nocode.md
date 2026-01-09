@@ -20,8 +20,8 @@ API는 프로그램들이 서로 대화하는 방법입니다.
 ```mermaid
 flowchart LR
     subgraph Request[요청]
-        A[손님] -->|스테이크 주세요| B["웨이터<br/>(API)"]
-        B -->|스테이크 1개 요청| C["주방<br/>(서비스)"]
+        A[손님] -->|스테이크 주세요| B["웨이터 (API)"]
+        B -->|스테이크 1개 요청| C["주방 (서비스)"]
     end
     subgraph Response[응답]
         C2[주방] -->|스테이크 완성| B2[웨이터]
@@ -174,7 +174,7 @@ ComfyUI는 이미지 생성에 특화된 노드 기반 도구입니다.
 ```mermaid
 flowchart TB
     A[텍스트 프롬프트] --> B[Stable Diffusion]
-    C["참조 이미지<br/>ControlNet"] --> B
+    C["참조 이미지 ControlNet"] --> B
     B --> D[후처리]
     D --> E[이미지 출력]
 
@@ -226,7 +226,7 @@ n8n으로 만든 고객 문의 자동 분류입니다.
 
 ```mermaid
 flowchart TB
-    A[고객센터 이메일 수신] --> B["Claude API<br/>문의 분류"]
+    A[고객센터 이메일 수신] --> B["Claude API 문의 분류"]
     B --> C{분류 결과}
     C -->|환불| D[환불팀 Slack]
     C -->|배송| E[배송팀 Slack]

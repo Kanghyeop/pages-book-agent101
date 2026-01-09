@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+  <style>
+    .box { stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 12px; font-weight: 600; fill: #333333; }
+    .io { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #333333; }
+    .arrow { fill: none; stroke: #333333; stroke-width: 1.5; }
+    .loop-arrow { fill: none; stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Input -->
+  <circle cx="50" cy="115" r="20" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="1.5"/>
+  <text x="50" y="119" text-anchor="middle" class="io">질문</text>
+
+  <!-- Arrow to loop -->
+  <line x1="70" y1="115" x2="95" y2="115" class="arrow"/>
+  <polygon points="100,115 90,110 90,120" fill="#333333"/>
+
+  <!-- Main loop box -->
+  <rect x="100" y="35" width="200" height="165" rx="10" fill="#FAFAFA" stroke="#DDDDDD" stroke-width="1"/>
+
+  <!-- Thought (single blue) -->
+  <rect x="120" y="50" width="160" height="35" rx="6" fill="#E3F2FD" class="box"/>
+  <text x="200" y="72" text-anchor="middle" class="title">Thought</text>
+
+  <!-- Arrow down -->
+  <line x1="200" y1="85" x2="200" y2="98" class="arrow"/>
+  <polygon points="200,103 195,95 205,95" fill="#333333"/>
+
+  <!-- Action (single blue) -->
+  <rect x="120" y="103" width="160" height="35" rx="6" fill="#E3F2FD" class="box"/>
+  <text x="200" y="125" text-anchor="middle" class="title">Action</text>
+
+  <!-- Arrow down -->
+  <line x1="200" y1="138" x2="200" y2="151" class="arrow"/>
+  <polygon points="200,156 195,148 205,148" fill="#333333"/>
+
+  <!-- Observation (single blue) -->
+  <rect x="120" y="156" width="160" height="35" rx="6" fill="#E3F2FD" class="box"/>
+  <text x="200" y="178" text-anchor="middle" class="title">Observation</text>
+
+  <!-- Loop arrow back (gray) -->
+  <path d="M 280 175 Q 315 175 315 115 Q 315 50 280 50" class="loop-arrow"/>
+  <polygon points="280,50 290,45 290,55" fill="#666666"/>
+
+  <!-- Arrow to output -->
+  <line x1="300" y1="115" x2="325" y2="115" class="arrow"/>
+  <polygon points="330,115 320,110 320,120" fill="#333333"/>
+
+  <!-- Output -->
+  <circle cx="350" cy="115" r="20" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="1.5"/>
+  <text x="350" y="119" text-anchor="middle" class="io">답변</text>
+
+  <!-- Figure caption -->
+  <text x="200" y="248" text-anchor="middle" class="figure">Figure X-3. ReAct 패턴</text>
+</svg>

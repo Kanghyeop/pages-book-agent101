@@ -65,11 +65,11 @@ SuperStaffing의 목표는 효율성을 10% 높이는 게 아닙니다. 의료 �
 ```mermaid
 flowchart TB
     subgraph Hospital[병원 5블록 모델]
-        E[Executive - 경영진<br/>병원장, 진료부장<br/>운영 정책, 품질 기준]
-        SS[SharedServices - 기업인프라<br/>보험 청구, 행정, HR<br/>의무기록 관리, 정산]
-        EX["Execution - 실무진 ★ 핵심<br/>의사: 진단, 처방<br/>간호사: 환자 케어"]
-        D["Discovery - 연구실<br/>임상 연구, 신약 개발<br/>학술 활동"]
-        F["Front - 고객접점 ← 히포 집중<br/>환자 대면 커뮤니케이션<br/>예약, 안내, 24시간 응대"]
+        E[Executive - 경영진 병원장, 진료부장 운영 정책, 품질 기준]
+        SS[SharedServices - 기업인프라 보험 청구, 행정, HR 의무기록 관리, 정산]
+        EX["Execution - 실무진 ★ 핵심 의사: 진단, 처방 간호사: 환자 케어"]
+        D["Discovery - 연구실 임상 연구, 신약 개발 학술 활동"]
+        F["Front - 고객접점 ← 히포 집중 환자 대면 커뮤니케이션 예약, 안내, 24시간 응대"]
     end
 
     E --> SS
@@ -194,16 +194,16 @@ flowchart TB
 flowchart TB
     subgraph Platform[HIPPO Agent Platform]
         subgraph UseCases[Use Cases]
-            P[Provider<br/>use-cases]
-            PA[Payor<br/>use-cases]
-            PH[Pharma<br/>use-cases]
+            P[Provider use-cases]
+            PA[Payor use-cases]
+            PH[Pharma use-cases]
         end
 
-        UseCases --> TA[1000+ Task Agents<br/>자격확인, 케어관리, 리마인더<br/>아웃리치, 임상시험...]
+        UseCases --> TA[1000+ Task Agents 자격확인, 케어관리, 리마인더 아웃리치, 임상시험...]
 
-        TA --> PM[Primary Model - core<br/>300B / private]
+        TA --> PM[Primary Model - core 300B / private]
 
-        PM <--> SM[Supervisor / Support Models - 30+<br/>safety checks, accuracy, OCR<br/>labs/vitals, etc.]
+        PM <--> SM[Supervisor / Support Models - 30+ safety checks, accuracy, OCR labs/vitals, etc.]
     end
 
     style PM fill:#E3F2FD
@@ -363,15 +363,15 @@ Spanish Preventive Care Reminders처럼 특정 언어권 환자를 위한 맞춤
 ```mermaid
 flowchart TB
     subgraph LawFirm[변호사 사무실 5블록]
-        E[Executive<br/>대외 협력, 파트너십<br/>품질기준, 운영정책]
+        E[Executive 대외 협력, 파트너십 품질기준, 운영정책]
 
-        SS[SharedServices<br/>문서/기록 정리<br/>Finance, 정산<br/>HR, 급여, 근태]
+        SS[SharedServices 문서/기록 정리 Finance, 정산 HR, 급여, 근태]
 
-        EX["Execution ★ 핵심<br/>상담/사건수행<br/>리서치/서면업무"]
+        EX["Execution ★ 핵심 상담/사건수행 리서치/서면업무"]
 
-        D[Discovery<br/>뉴스 하이라이트<br/>시장/경쟁사 동향]
+        D[Discovery 뉴스 하이라이트 시장/경쟁사 동향]
 
-        F[Front<br/>24시간 문의 응대<br/>커뮤니케이션<br/>콘텐츠 제작/SEO]
+        F[Front 24시간 문의 응대 커뮤니케이션 콘텐츠 제작/SEO]
     end
 
     E --> SS

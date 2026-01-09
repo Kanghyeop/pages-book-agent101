@@ -17,7 +17,7 @@ ReAct는 "Reasoning + Acting"의 줄임말입니다. 생각하고, 행동하고,
 
 조직에 비유하면, 혼자서 일을 처리하는 꼼꼼한 담당자입니다.
 
-![ReAct 패턴](assets/react-pattern.svg)
+![ReAct 패턴](/assets/react-pattern.svg)
 
 **예시 흐름:**
 1. 요청: "경쟁사 분석해줘"
@@ -39,7 +39,7 @@ ReAct는 "Reasoning + Acting"의 줄임말입니다. 생각하고, 행동하고,
 
 Orchestrator-Worker 패턴은 말 그대로 오케스트라 지휘자와 연주자의 관계입니다. 조직으로 치면 팀장과 팀원이죠.
 
-![Orchestrator-Worker 패턴](assets/orchestrator-worker.svg)
+![Orchestrator-Worker 패턴](/assets/orchestrator-worker.svg)
 
 **Orchestrator(팀장)의 역할:**
 - 전체 작업을 파악하고 계획을 세웁니다
@@ -61,7 +61,7 @@ Orchestrator-Worker 패턴은 말 그대로 오케스트라 지휘자와 연주�
 
 Router는 고객센터의 안내 데스크와 같습니다. 전화가 오면 "무슨 용건이신가요?"를 파악하고, 적절한 부서로 연결해줍니다.
 
-![Router 패턴](assets/router-pattern.svg)
+![Router 패턴](/assets/router-pattern.svg)
 
 Router가 똑똑할수록 사용자는 빠르게 원하는 답을 얻습니다. Router가 멍청하면 사용자는 여러 부서를 떠돌게 되죠. 우리 모두 경험해봤을 겁니다, 고객센터에서 "담당 부서로 연결해드리겠습니다"를 세 번 듣는 그 좌절감을.
 
@@ -73,7 +73,7 @@ Router가 똑똑할수록 사용자는 빠르게 원하는 답을 얻습니다. 
 
 Evaluator-Optimizer 패턴은 바로 이 원리를 적용합니다.
 
-![Evaluator-Optimizer 패턴](assets/evaluator-optimizer.svg)
+![Evaluator-Optimizer 패턴](/assets/evaluator-optimizer.svg)
 
 **작동 방식:**
 1. 생성자가 결과물을 만듭니다
@@ -91,7 +91,7 @@ Evaluator-Optimizer 패턴은 바로 이 원리를 적용합니다.
 
 이건 마치 대표 없이 돌아가는 조직, 또는 역할이 명확히 분담된 스타트업 팀과 비슷합니다.
 
-![자율 멀티에이전트 패턴](assets/multi-agent-autonomous.svg)
+![자율 멀티에이전트 패턴](/assets/multi-agent-autonomous.svg)
 
 각자가 자기 일을 하면서, 필요할 때 서로 정보를 주고받습니다. 누가 시키지 않아도 자기 역할에 맞는 일을 찾아서 합니다.
 
@@ -111,7 +111,7 @@ ReAct가 "생각하고 행동하고 확인하는" 사이클이라면, Prompt Cha
 
 복잡한 문제를 풀 때 우리는 어떻게 하나요? 한 번에 답을 내려고 하면 머리가 터집니다. 대신 단계별로 접근합니다.
 
-![Prompt Chaining 패턴](assets/prompt-chaining.svg)
+![Prompt Chaining 패턴](/assets/prompt-chaining.svg)
 
 각 단계는 단순합니다. 하지만 이걸 순서대로 연결하면 복잡한 문제도 풀 수 있습니다.
 
@@ -129,7 +129,7 @@ ReAct가 "생각하고 행동하고 확인하는" 사이클이라면, Prompt Cha
 
 MoA(Mixture of Agents)는 여러 전문가에게 자문을 구하는 것과 같습니다.
 
-![MoA 패턴](assets/moa-pattern.svg)
+![MoA 패턴](/assets/moa-pattern.svg)
 
 LLM은 확률적입니다. 같은 질문에도 매번 조금씩 다른 답을 합니다. 이 '다름'이 때로는 문제지만, 때로는 장점입니다.
 
@@ -143,7 +143,7 @@ LLM은 확률적입니다. 같은 질문에도 매번 조금씩 다른 답을 �
 
 에이전트가 문제를 푸는 방식 중 흥미로운 접근이 "코드를 짜서 실행하는" 방식입니다.
 
-![CodeAct 비교](assets/codeact-comparison.svg)
+![CodeAct 비교](/assets/codeact-comparison.svg)
 
 코드는 거짓말을 하지 않습니다. 계산기가 2+2를 5라고 하지 않듯이, 올바른 코드는 올바른 답을 냅니다.
 
@@ -160,7 +160,7 @@ CodeAct는 특히 데이터 분석, 수학적 계산, 반복 작업에 강합니
 
 순서대로 일하는 것과 동시에 일하는 것. 어느 쪽이 빠를까요?
 
-![병렬 처리 비교](assets/parallelization.svg)
+![병렬 처리 비교](/assets/parallelization.svg)
 
 하지만 아무 작업이나 병렬로 할 수 있는 건 아닙니다.
 
@@ -178,7 +178,7 @@ CodeAct는 특히 데이터 분석, 수학적 계산, 반복 작업에 강합니
 
 Human-in-the-loop는 이 문제에 대한 현실적인 답입니다. 완전 자동화 대신, 중요한 지점에서 사람이 확인하고 승인하는 구조입니다.
 
-![Human-in-the-loop 패턴](assets/human-in-the-loop.svg)
+![Human-in-the-loop 패턴](/assets/human-in-the-loop.svg)
 
 어디에 사람을 넣을까요?
 
@@ -198,7 +198,7 @@ Human-in-the-loop는 이 문제에 대한 현실적인 답입니다. 완전 자�
 
 DeepResearch 류의 서비스는 "깊이 있는 조사"를 자동화합니다. 사용자가 주제를 주면, 알아서 조사하고 보고서를 작성해줍니다.
 
-![DeepResearch 구조](assets/deep-research.svg)
+![DeepResearch 구조](/assets/deep-research.svg)
 
 구조를 뜯어보면:
 

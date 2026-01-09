@@ -15,7 +15,7 @@ parent: Part 4
 
 유명한 예시가 있습니다:
 
-![임베딩 공간](assets/embedding-space.svg)
+![임베딩 공간](/assets/embedding-space.svg)
 
 ```
 King - Man + Woman = Queen
@@ -52,7 +52,7 @@ Queen = [0.7, 0.4, 1.0, ...]
 
 데이터를 저장하는 방식은 여러 가지입니다.
 
-![데이터베이스 종류](assets/db-types.svg)
+![데이터베이스 종류](/assets/db-types.svg)
 
 ### 1. 관계형 데이터베이스 (SQL)
 
@@ -115,7 +115,7 @@ JSON처럼 유연한 구조입니다.
 
 ## 벡터 DB vs 기존 DB
 
-![DB 비교](assets/db-comparison.svg)
+![DB 비교](/assets/db-comparison.svg)
 
 | 구분 | 기존 DB | 벡터 DB |
 |------|---------|---------|
@@ -132,7 +132,7 @@ JSON처럼 유연한 구조입니다.
 
 RAG는 Retrieval-Augmented Generation의 약자입니다. 검색(Retrieval)과 생성(Generation)을 결합합니다.
 
-![RAG 흐름](assets/rag-flow.svg)
+![RAG 흐름](/assets/rag-flow.svg)
 
 ### 왜 RAG가 필요한가?
 
@@ -169,7 +169,7 @@ RAG의 한계:
 
 GraphRAG는 그래프 데이터베이스를 활용합니다.
 
-![GraphRAG 구조](assets/graphrag-structure.svg)
+![GraphRAG 구조](/assets/graphrag-structure.svg)
 
 ```
 [RAG vs GraphRAG]

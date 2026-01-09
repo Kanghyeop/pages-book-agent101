@@ -76,15 +76,15 @@ parent: Part 1
 
 관점을 바꿔 모식도를 다시 그려보겠습니다. 인간과 AI 도구를 같은 위계에 두겠습니다. 그러면 세가지 그림은 각각 이렇게 그려질 수 있습니다.
 
-![HITL 다이어그램](assets/hitl-diagram.svg)
+![HITL 다이어그램](/assets/hitl-diagram.svg)
 
 모든 작업이 반드시 인간을 거칩니다. AI가 초안을 만들어도, 인간이 확인하고 승인해야 다음 단계로 넘어갑니다. 인간이 병목입니다. 처리량은 인간의 시간에 묶입니다.
 
-![HOTL 다이어그램](assets/hotl-diagram.svg)
+![HOTL 다이어그램](/assets/hotl-diagram.svg)
 
 정상적인 작업은 AI가 자동으로 처리합니다. 인간은 루프 위에서 전체를 감독하다가, 예외가 발생했을 때만 개입합니다. 인간은 더 이상 병목이 아닙니다. 처리량은 AI의 속도를 따라갑니다.
 
-![HOOTL 다이어그램](assets/hootl-diagram.svg)
+![HOOTL 다이어그램](/assets/hootl-diagram.svg)
 
 AI가 완전히 자율적으로 루프를 돌립니다. 인간은 루프 밖에서 시스템을 설계하고 모니터링만 합니다. 인간의 역할은 "일을 하는 것"에서 "시스템을 만드는 것"으로 바뀝니다.
 

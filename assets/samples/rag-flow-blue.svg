@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260">
+  <style>
+    .box { stroke: #333333; stroke-width: 1.5; }
+    .text-l { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .text-m { font-family: Pretendard, -apple-system, sans-serif; font-size: 12px; font-weight: 500; fill: #333333; }
+    .text-s { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; font-weight: 400; fill: #666666; }
+    .step { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; font-weight: 500; fill: #666666; }
+    .arrow { fill: none; stroke: #333333; stroke-width: 1.5; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 12px; font-weight: 500; fill: #666666; }
+  </style>
+  <text x="280" y="24" text-anchor="middle" class="text-l">RAG (Retrieval-Augmented Generation) 흐름</text>
+  <rect x="20" y="50" width="90" height="55" rx="6" fill="#F5F5F5" class="box"/>
+  <text x="65" y="75" text-anchor="middle" class="text-m">질문</text>
+  <text x="65" y="92" text-anchor="middle" class="text-s">"연차 규정은?"</text>
+  <line x1="110" y1="77" x2="138" y2="77" class="arrow"/>
+  <polygon points="143,77 133,72 133,82" fill="#333333"/>
+  <text x="125" y="67" text-anchor="middle" class="step">1</text>
+  <rect x="143" y="50" width="85" height="55" rx="6" fill="#E3F2FD" class="box"/>
+  <text x="185" y="75" text-anchor="middle" class="text-m">임베딩</text>
+  <text x="185" y="92" text-anchor="middle" class="text-s">[0.2, 0.8, ...]</text>
+  <line x1="228" y1="77" x2="258" y2="77" class="arrow"/>
+  <polygon points="263,77 253,72 253,82" fill="#333333"/>
+  <text x="243" y="67" text-anchor="middle" class="step">2</text>
+  <rect x="263" y="40" width="95" height="75" rx="6" fill="#E3F2FD" class="box"/>
+  <text x="310" y="68" text-anchor="middle" class="text-m">벡터 DB</text>
+  <text x="310" y="86" text-anchor="middle" class="text-s">유사 문서</text>
+  <text x="310" y="102" text-anchor="middle" class="text-s">검색</text>
+  <line x1="310" y1="115" x2="310" y2="143" class="arrow"/>
+  <polygon points="310,148 305,138 315,138" fill="#333333"/>
+  <text x="322" y="135" text-anchor="middle" class="step">3</text>
+  <rect x="263" y="148" width="95" height="55" rx="6" fill="#D4EDDA" class="box"/>
+  <text x="310" y="172" text-anchor="middle" class="text-m">검색 결과</text>
+  <text x="310" y="190" text-anchor="middle" class="text-s">"인사규정.pdf"</text>
+  <line x1="358" y1="175" x2="388" y2="175" class="arrow"/>
+  <polygon points="393,175 383,170 383,180" fill="#333333"/>
+  <rect x="393" y="125" width="85" height="105" rx="6" fill="#E3F2FD" class="box"/>
+  <text x="435" y="152" text-anchor="middle" class="text-m">LLM</text>
+  <text x="435" y="172" text-anchor="middle" class="text-s">질문 +</text>
+  <text x="435" y="188" text-anchor="middle" class="text-s">검색 결과</text>
+  <text x="435" y="204" text-anchor="middle" class="text-s">→ 답변 생성</text>
+  <text x="380" y="152" text-anchor="middle" class="step">4</text>
+  <line x1="478" y1="175" x2="508" y2="175" class="arrow"/>
+  <polygon points="513,175 503,170 503,180" fill="#333333"/>
+  <text x="493" y="160" text-anchor="middle" class="step">5</text>
+  <rect x="513" y="148" width="65" height="55" rx="6" fill="#F5F5F5" class="box"/>
+  <text x="545" y="172" text-anchor="middle" class="text-m">답변</text>
+  <text x="545" y="190" text-anchor="middle" class="text-s">"15일..."</text>
+  <text x="280" y="248" text-anchor="middle" class="figure">Figure 44-1. RAG 처리 흐름</text>
+</svg>

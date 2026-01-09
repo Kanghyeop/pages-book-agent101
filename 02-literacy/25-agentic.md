@@ -138,7 +138,7 @@ flowchart TB
     C --> D[3. 수정 계획 수립]
     D --> E[4. 코드 변경]
     E --> F[5. 사용자 확인 요청]
-    F --> G["수정된 코드<br/>사용자 승인 후 적용"]
+    F --> G["수정된 코드 사용자 승인 후 적용"]
 
     style A fill:#E3F2FD
     style G fill:#D4EDDA

@@ -180,7 +180,7 @@ parent: Part 5
 
 ```mermaid
 flowchart LR
-    M1[Month 1<br/>설계] --> M2[Month 2<br/>구축] --> M3[Month 3<br/>프로덕션]
+    M1[Month 1 설계] --> M2[Month 2 구축] --> M3[Month 3 프로덕션]
 ```
 
 *Figure 56-1. 3개월 라이트하우스 일정*

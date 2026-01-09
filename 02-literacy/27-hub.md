@@ -186,10 +186,10 @@ CrewAI 예시
 ```mermaid
 flowchart TB
     subgraph 인프라[AI 인프라 레이어]
-        A[모델 저장소<br/>HuggingFace]
-        B[모델 서빙/라우팅<br/>OpenRouter, fal, Replicate]
-        C[개발 프레임워크<br/>LangChain, LangGraph, CrewAI]
-        D[최종 애플리케이션<br/>여러분이 만드는 것]
+        A[모델 저장소 HuggingFace]
+        B[모델 서빙/라우팅 OpenRouter, fal, Replicate]
+        C[개발 프레임워크 LangChain, LangGraph, CrewAI]
+        D[최종 애플리케이션 여러분이 만드는 것]
     end
 
     A --> B --> C --> D
