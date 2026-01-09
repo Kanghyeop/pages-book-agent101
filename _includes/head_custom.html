@@ -92,31 +92,47 @@
   }
 </style>
 
-<!-- 이전/다음 네비게이션 생성 (Mermaid는 _config.yml에서 테마 네이티브 지원) -->
+<!-- 이전/다음 네비게이션 생성 -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     createPrevNextNav();
   });
 
   function createPrevNextNav() {
-    // 사이드바에서 모든 네비게이션 링크 수집
+    // 사이드바에서 실제 페이지 링크만 수집 (부모 섹션 제외)
     var navLinks = [];
-    document.querySelectorAll('.nav-list-item a.nav-list-link').forEach(function(link) {
-      navLinks.push({
-        href: link.getAttribute('href'),
-        title: link.textContent.trim()
-      });
+    document.querySelectorAll('.nav-list a.nav-list-link').forEach(function(link) {
+      var href = link.getAttribute('href');
+      // 실제 .html 페이지만 포함 (섹션 헤더 제외)
+      if (href && href.indexOf('.html') !== -1) {
+        navLinks.push({
+          href: href,
+          title: link.textContent.trim()
+        });
+      }
     });
 
     if (navLinks.length === 0) return;
 
+    // 경로 정규화 함수
+    function normalizePath(path) {
+      // baseurl 제거, 슬래시 정리
+      return path
+        .replace('/pages-book-agent101', '')
+        .replace(/\/+/g, '/')
+        .replace(/\/$/, '')
+        .toLowerCase();
+    }
+
     // 현재 페이지 찾기
-    var currentPath = window.location.pathname;
+    var currentPath = normalizePath(window.location.pathname);
     var currentIndex = -1;
+
     for (var i = 0; i < navLinks.length; i++) {
-      if (navLinks[i].href === currentPath ||
-          currentPath.endsWith(navLinks[i].href) ||
-          navLinks[i].href.endsWith(currentPath.replace(/\/$/, ''))) {
+      var linkPath = normalizePath(navLinks[i].href);
+      if (currentPath === linkPath ||
+          currentPath.endsWith(linkPath) ||
+          linkPath.endsWith(currentPath)) {
         currentIndex = i;
         break;
       }
@@ -153,7 +169,10 @@
     }
 
     // 메인 컨텐츠 영역에 추가
-    var mainContent = document.querySelector('.main-content') || document.querySelector('main') || document.body;
+    var mainContent = document.querySelector('.main-content-wrap') ||
+                      document.querySelector('.main-content') ||
+                      document.querySelector('main') ||
+                      document.body;
     mainContent.appendChild(nav);
   }
 </script>
