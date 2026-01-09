@@ -1,6 +1,6 @@
 ---
-title: "런웨이를 늘리는 것이 먼저"
-nav_order: 3
+title: "AI로 돈버는법"
+nav_order: 2
 parent: Part 5
 ---
 
