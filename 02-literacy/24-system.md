@@ -148,10 +148,6 @@ flowchart LR
     subgraph Plan["Plan 모드"]
         P1["계획"] --> P2["승인"] --> P3["실행"]
     end
-
-    style Normal fill:#FFEBEE
-    style Auto fill:#FFF3CD
-    style Plan fill:#D4EDDA
 ```
 
 *Figure 24-3. 세 가지 모드 비교: 승인 빈도와 타이밍*
@@ -178,24 +174,14 @@ Plan 모드:
 Plan 모드는 계획과 실행을 분리합니다. 이는 극단적인 시나리오도 가능하게 만듭니다:
 
 ```mermaid
-sequenceDiagram
-    participant U as User
-    participant P as Planner
-    participant E as Executor
-
-    Note over U,P: Day 1 - Planning
-    U->>P: Request refactoring
-    P->>P: Analyze codebase
-    P->>U: Plan complete
-
-    Note over U,P: Day 2-29 - Review
-    U->>P: Request changes
-    P->>U: Updated
-
-    Note over U,E: Day 30 - Execution
-    U->>P: Approve
-    P->>E: Execute tasks
-    E->>U: Done
+flowchart LR
+    U[User] -->|1.Request| P[Planner]
+    P -->|2.Plan| U
+    U -->|3.Revise| P
+    P -->|4.Updated| U
+    U -->|5.Approve| P
+    P -->|6.Execute| E[Executor]
+    E -->|7.Done| U
 ```
 
 *Figure 24-4. Plan 모드 심층: 계획과 실행의 분리*
@@ -228,10 +214,6 @@ flowchart LR
     subgraph Danger["위험 (시스템)"]
         D1["삭제, 명령 실행"] --> D2["승인 필수"]
     end
-
-    style Safe fill:#D4EDDA
-    style Medium fill:#FFF3CD
-    style Danger fill:#FFEBEE
 ```
 
 *Figure 24-5. 권한 요청 구조: 안전-민감-위험 분류*
