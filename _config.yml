@@ -12,6 +12,14 @@ nav_sort: case_insensitive
 search_enabled: true
 heading_anchors: true
 
+# 이전/다음 네비게이션 (footer에 표시)
+nav_enabled: true
+back_to_top: true
+back_to_top_text: "맨 위로"
+
+# Color scheme (GitHub-like)
+color_scheme: light
+
 # Collections for chapters
 collections:
   docs:
