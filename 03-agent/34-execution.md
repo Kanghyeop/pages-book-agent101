@@ -160,9 +160,6 @@ flowchart TB
     Result --> D[손해사정사: 최종 검토 및 승인]
     D --> E[모든 수정 내역 로그 저장]
     E --> F[강화학습 데이터로 활용]
-
-    style Agent fill:#E3F2FD
-    style Result fill:#D4EDDA
 ```
 
 *Figure 34-2. 보험 청구 AI 에이전트 처리 흐름*

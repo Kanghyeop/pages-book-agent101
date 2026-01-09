@@ -40,10 +40,6 @@ flowchart LR
     subgraph FullAgent[완전 에이전트]
         C1[목표] --> C2[자율실행]
     end
-
-    style Simple fill:#F5F5F5
-    style Agentic fill:#FFF3CD
-    style FullAgent fill:#D4EDDA
 ```
 
 *Figure 25-1. 단순 어시스턴트 → 에이전틱 → 완전 에이전트*

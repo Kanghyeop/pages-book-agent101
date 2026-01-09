@@ -58,9 +58,6 @@ flowchart TB
         D1 -.->|시간 경과| D2["배송기사: 택배 도착했습니다"]
         D2 --> C2[나]
     end
-
-    style Polling fill:#FFCCCC
-    style Push fill:#D4EDDA
 ```
 
 *Figure 26-2. 폴링(반복 질문) vs 웹훅(알림)*

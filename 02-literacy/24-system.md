@@ -195,40 +195,19 @@ Plan 모드:
 Plan 모드는 계획과 실행을 분리합니다. 이는 극단적인 시나리오도 가능하게 만듭니다:
 
 ```mermaid
-sequenceDiagram
-    participant U as 사용자
-    participant P as Planner (계획 모드)
-    participant E as Executor (실행 모드)
+flowchart TB
+    U[사용자: 리팩토링 요청] --> P1[Planner: 탐색]
+    P1 --> P2[Planner: 분석]
+    P2 --> P3[계획서 완성]
+    P3 --> R[사용자 검토/수정]
+    R --> A[승인]
+    A --> E[Executor: 실행]
+    E --> Done[완료]
 
-    Note over U,E: Day 1: 계획 수립
-    U->>P: "대규모 리팩토링 해줘"
-    P->>P: 코드베이스 탐색 (2시간)
-    P->>P: 아키텍처 분석 (4시간)
-    P->>P: 의존성 파악 (3시간)
-    P->>P: 마이그레이션 전략 수립 (6시간)
-    P->>P: 테스트 계획 작성 (4시간)
-    P->>P: 롤백 전략 수립 (3시간)
-    P->>U: "계획서 완성 (50페이지)"
-
-    Note over U,E: Day 2-29: 사용자 검토 및 논의
-    U->>P: "이 부분 수정해줘"
-    P->>P: 계획 수정 (30분)
-    P->>U: "수정 완료"
-    U->>P: "이 케이스도 고려해줘"
-    P->>P: 계획 보강 (1시간)
-    P->>U: "반영 완료"
-
-    Note over U,E: Day 30: 승인 및 실행
-    U->>P: "승인"
-    P->>E: TodoList 전달
-    E->>E: 작업 1 실행
-    E->>E: 작업 2 실행
-    E->>U: "중요 결정 필요" (컨펌)
-    U->>E: "승인"
-    E->>E: 작업 3~50 실행
-    E->>U: "완료"
-
-    Note over U,E: 총 소요: 30일 (계획 1일 + 검토 28일 + 실행 1일)
+    style P1 fill:#E3F2FD
+    style P2 fill:#E3F2FD
+    style P3 fill:#E3F2FD
+    style E fill:#D4EDDA
 ```
 
 *Figure 24-4. Plan 모드 심층: 계획과 실행의 분리*
