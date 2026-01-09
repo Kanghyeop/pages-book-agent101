@@ -54,7 +54,7 @@ LLM: 다음에 올 단어 확률 계산
 
 모델을 학습했다고 바로 쓸 수 있는 게 아닙니다. 서비스로 제공해야 합니다.
 
-![LLM Serving 구조](/assets/llm-serving.svg)
+![LLM Serving 구조](/pages-book-agent101/assets/llm-serving.svg)
 
 OpenAI, Anthropic, Google 같은 회사들이 하는 일의 상당 부분이 이 Serving입니다.
 
@@ -85,12 +85,12 @@ OpenAI, Anthropic, Google 같은 회사들이 하는 일의 상당 부분이 이
 
 ### HTTP와 API
 
-![HTTP 요청/응답](/assets/http-request-response.svg)
+![HTTP 요청/응답](/pages-book-agent101/assets/http-request-response.svg)
 
 HTTP: 웹에서 정보를 주고받는 표준 방식
 API: 프로그램이 다른 프로그램과 대화하는 방법
 
-![API 호출 구조](/assets/api-structure.svg)
+![API 호출 구조](/pages-book-agent101/assets/api-structure.svg)
 
 ### JSON: 데이터의 공용어
 
@@ -130,7 +130,7 @@ response = client.chat.completions.create(...)
 
 ### Frontend와 Backend
 
-![Frontend vs Backend](/assets/frontend-backend.svg)
+![Frontend vs Backend](/pages-book-agent101/assets/frontend-backend.svg)
 
 - Frontend: 사용자가 보는 화면 (버튼, 입력창, 결과 표시)
 - Backend: 서버에서 돌아가는 로직 (데이터 처리, API 호출)
@@ -162,7 +162,7 @@ LLM은 글자 단위가 아니라 토큰 단위로 처리합니다.
 
 ### 파이프라인: 데이터가 흐르는 경로
 
-![파이프라인 흐름](/assets/pipeline-flow.svg)
+![파이프라인 흐름](/pages-book-agent101/assets/pipeline-flow.svg)
 
 파이프라인이 명확하면:
 - 어느 단계에서 문제가 생겼는지 찾기 쉬움

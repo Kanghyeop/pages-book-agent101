@@ -144,7 +144,7 @@ flowchart TB
 
 관리자는 대시보드(칸반)에서 To Do, In Progress, Issue, Done으로 상태를 모니터링합니다. 'Issue가 발생했다'는 알람이 발생하면, 그때만 인간이 개입하여 최소한의 대응을 합니다.
 
-![칸반 보드](/assets/kanban-board.svg)
+![칸반 보드](/pages-book-agent101/assets/kanban-board.svg)
 
 ---
 

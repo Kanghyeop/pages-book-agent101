@@ -32,7 +32,7 @@ LangChain은 LLM으로 애플리케이션을 만들 때 쓰는 기본 프레임�
 
 ### 핵심 개념 3가지
 
-![LangChain 핵심 개념](/assets/langchain-concepts.svg)
+![LangChain 핵심 개념](/pages-book-agent101/assets/langchain-concepts.svg)
 
 1. Chain (체인): 여러 단계를 순서대로 연결합니다. "요약해줘" 요청이 들어오면 프롬프트 작성 → LLM 호출 → 결과 정리가 한 번에 실행됩니다.
 
@@ -48,7 +48,7 @@ LangChain은 LLM으로 애플리케이션을 만들 때 쓰는 기본 프레임�
 
 간단한 애플리케이션(문서 요약, Q&A, 번역)은 LangChain만으로 충분합니다. 하지만 복잡한 분기나 반복이 필요하면 한계가 생깁니다.
 
-![LangChain의 한계](/assets/langchain-limit.svg)
+![LangChain의 한계](/pages-book-agent101/assets/langchain-limit.svg)
 
 ---
 
@@ -65,7 +65,7 @@ LangGraph는 LangChain 팀이 만든 그래프 기반 워크플로우 도구입�
 
 ### 핵심 개념 4가지
 
-![LangGraph 핵심 개념](/assets/langgraph-concepts.svg)
+![LangGraph 핵심 개념](/pages-book-agent101/assets/langgraph-concepts.svg)
 
 1. State (상태): 티켓 하나가 가지고 다니는 정보 꾸러미입니다. "지금 어디까지 왔나?"
 ```
@@ -90,7 +90,7 @@ LangGraph는 LangChain 팀이 만든 그래프 기반 워크플로우 도구입�
 
 ## 근조화환 사례로 이해하기
 
-![근조화환 워크플로우](/assets/langgraph-workflow.svg)
+![근조화환 워크플로우](/pages-book-agent101/assets/langgraph-workflow.svg)
 
 실제 흐름:
 1. 전화 주문 (ElevenLabs 음성 AI) → State 생성
