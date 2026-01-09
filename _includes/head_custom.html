@@ -102,60 +102,56 @@
 
 <!-- 이전/다음 네비게이션 생성 -->
 <script>
-  // 페이지 완전 로드 후 실행 (사이드바 동적 로드 대응)
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNav);
-  } else {
-    initNav();
-  }
-
-  function initNav() {
-    // 사이드바 로드 대기 (최대 3초, 100ms 간격)
-    var attempts = 0;
-    var maxAttempts = 30;
-
-    function tryCreateNav() {
-      var links = document.querySelectorAll('.nav-list-item > a.nav-list-link');
-      if (links.length > 0) {
-        createPrevNextNav();
-      } else if (attempts < maxAttempts) {
-        attempts++;
-        setTimeout(tryCreateNav, 100);
-      }
-    }
-    tryCreateNav();
-  }
+  // window.onload로 모든 리소스 로드 후 실행
+  window.addEventListener('load', function() {
+    setTimeout(createPrevNextNav, 500);
+  });
 
   function createPrevNextNav() {
     // 이미 생성되었으면 스킵
     if (document.querySelector('.nav-footer')) return;
 
-    // 사이드바에서 실제 페이지 링크만 수집
+    // 사이드바에서 페이지 링크 수집 (여러 셀렉터 시도)
     var navLinks = [];
-    document.querySelectorAll('.nav-list-item > a.nav-list-link').forEach(function(link) {
+    var selectors = [
+      '.site-nav a[href*=".html"]',
+      '.nav-list a[href*=".html"]',
+      '.nav-list-item a',
+      '.site-nav a'
+    ];
+
+    var linkElements = null;
+    for (var i = 0; i < selectors.length; i++) {
+      linkElements = document.querySelectorAll(selectors[i]);
+      if (linkElements.length > 0) break;
+    }
+
+    if (!linkElements || linkElements.length === 0) return;
+
+    linkElements.forEach(function(link) {
       var href = link.getAttribute('href');
-      if (href && href.indexOf('.html') !== -1) {
-        navLinks.push({
-          href: href,
-          title: link.textContent.trim()
-        });
+      var text = link.textContent.trim();
+      // 빈 링크, 앵커, 외부 링크 제외
+      if (href && text &&
+          href.indexOf('#') !== 0 &&
+          href.indexOf('http') !== 0 &&
+          !href.match(/^javascript/)) {
+        navLinks.push({ href: href, title: text });
       }
     });
 
-    if (navLinks.length === 0) return;
+    if (navLinks.length < 2) return;
 
-    // 파일명만 추출
-    function getFilename(path) {
-      var parts = path.split('/');
-      return parts[parts.length - 1].toLowerCase();
-    }
-
-    // 현재 페이지 찾기
-    var currentFilename = getFilename(window.location.pathname);
+    // 현재 페이지 찾기 (경로 정규화)
+    var currentPath = window.location.pathname;
     var currentIndex = -1;
 
     for (var i = 0; i < navLinks.length; i++) {
-      if (getFilename(navLinks[i].href) === currentFilename) {
+      var linkPath = navLinks[i].href;
+      // 상대경로를 절대경로로 변환하여 비교
+      var a = document.createElement('a');
+      a.href = linkPath;
+      if (a.pathname === currentPath) {
         currentIndex = i;
         break;
       }
@@ -176,7 +172,8 @@
       prevLink.textContent = prev.title;
       nav.appendChild(prevLink);
     } else {
-      nav.appendChild(document.createElement('span'));
+      var span = document.createElement('span');
+      nav.appendChild(span);
     }
 
     // 스페이서
@@ -198,7 +195,9 @@
     var mainContent = document.getElementById('main-content') ||
                       document.querySelector('.main-content') ||
                       document.querySelector('main') ||
-                      document.body;
-    mainContent.appendChild(nav);
+                      document.querySelector('.main');
+    if (mainContent) {
+      mainContent.appendChild(nav);
+    }
   }
 </script>
