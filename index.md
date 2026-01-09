@@ -47,12 +47,10 @@ nav_order: 0
 - [멀티에이전트 구성 패턴](04-technical/46-multi.html)
 
 ### Part 5. 개인과 조직에 적용하기
-- [원가를 설계하는 일](05-action/51-cost.html)
-- [오늘 저녁에 할 수 있는 일](05-action/52-tonight.html)
-- [런웨이를 늘리는 것이 먼저](05-action/53-runway.html)
-- [개인 액션플랜](05-action/54-personal.html)
-- [3개월 안에 프로덕션까지](05-action/55-quickwin.html)
-- [현실적 타임라인과 기대치](05-action/56-timeline.html)
+- [토큰경제](05-action/51-token.html)
+- [AI로 돈버는법](05-action/52-money.html)
+- [개인이 오늘 저녁에 할 일](05-action/53-personal.html)
+- [조직이 이번 주에 할 일](05-action/54-team.html)
 
 ### 부록 A
 - [Claude Code 사용법](appendix-a/A01.html)
@@ -66,6 +64,12 @@ nav_order: 0
 ### 부록 B: 김종우 기고
 - [AI 에이전트 스타트업: 안전 vs 경험](appendix-b/B01.html)
 - [Claude Code 꿀팁](appendix-b/B02.html)
+
+### 부록 C: 시맨틱 맵
+- [전체 요약](appendix-c/C01.html)
+- [시맨틱 앵커](appendix-c/C02.html)
+- [프리뷰](appendix-c/C03.html)
+- [액션플랜 요약](appendix-c/C04.html)
 
 ---
 

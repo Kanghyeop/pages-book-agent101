@@ -26,6 +26,10 @@ collections:
   docs:
     output: true
 
+# Mermaid 다이어그램 지원
+mermaid:
+  version: "10.9.1"
+
 # Defaults
 defaults:
   - scope:
