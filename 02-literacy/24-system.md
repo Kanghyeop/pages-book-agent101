@@ -135,19 +135,9 @@ Claude Code는 세 가지 모드로 작동할 수 있습니다:
 
 ```mermaid
 flowchart LR
-    subgraph Normal["일반 모드"]
-        N1["작업"] --> N2["승인"] --> N3["작업"] --> N4["승인"]
-    end
-
-    subgraph Auto["Auto-accept"]
-        A1["자동 실행"] --> A2{"위험?"}
-        A2 -->|Yes| A3["승인"]
-        A2 -->|No| A4["계속"]
-    end
-
-    subgraph Plan["Plan 모드"]
-        P1["계획"] --> P2["승인"] --> P3["실행"]
-    end
+    N["일반: 작업→승인 반복"]
+    A["Auto: 위험할 때만 승인"]
+    P["Plan: 계획→승인→실행"]
 ```
 
 *Figure 24-3. 세 가지 모드 비교: 승인 빈도와 타이밍*
@@ -203,17 +193,9 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    subgraph Safe["안전 (읽기)"]
-        S1["파일 읽기, 검색"] --> S2["자동 실행"]
-    end
-
-    subgraph Medium["민감 (수정)"]
-        M1["파일 수정, Git"] --> M2["모드별 처리"]
-    end
-
-    subgraph Danger["위험 (시스템)"]
-        D1["삭제, 명령 실행"] --> D2["승인 필수"]
-    end
+    S["안전: 자동 실행"]
+    M["민감: 모드별 처리"]
+    D["위험: 승인 필수"]
 ```
 
 *Figure 24-5. 권한 요청 구조: 안전-민감-위험 분류*
