@@ -102,16 +102,38 @@
 
 <!-- 이전/다음 네비게이션 생성 -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    createPrevNextNav();
-  });
+  // 페이지 완전 로드 후 실행 (사이드바 동적 로드 대응)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNav);
+  } else {
+    initNav();
+  }
+
+  function initNav() {
+    // 사이드바 로드 대기 (최대 3초, 100ms 간격)
+    var attempts = 0;
+    var maxAttempts = 30;
+
+    function tryCreateNav() {
+      var links = document.querySelectorAll('.nav-list-item > a.nav-list-link');
+      if (links.length > 0) {
+        createPrevNextNav();
+      } else if (attempts < maxAttempts) {
+        attempts++;
+        setTimeout(tryCreateNav, 100);
+      }
+    }
+    tryCreateNav();
+  }
 
   function createPrevNextNav() {
-    // 사이드바에서 실제 페이지 링크만 수집 (부모 섹션 제외)
+    // 이미 생성되었으면 스킵
+    if (document.querySelector('.nav-footer')) return;
+
+    // 사이드바에서 실제 페이지 링크만 수집
     var navLinks = [];
     document.querySelectorAll('.nav-list-item > a.nav-list-link').forEach(function(link) {
       var href = link.getAttribute('href');
-      // 실제 .html 페이지만 포함 (섹션 헤더 제외)
       if (href && href.indexOf('.html') !== -1) {
         navLinks.push({
           href: href,
@@ -128,13 +150,12 @@
       return parts[parts.length - 1].toLowerCase();
     }
 
-    // 현재 페이지 파일명
+    // 현재 페이지 찾기
     var currentFilename = getFilename(window.location.pathname);
     var currentIndex = -1;
 
     for (var i = 0; i < navLinks.length; i++) {
-      var linkFilename = getFilename(navLinks[i].href);
-      if (currentFilename === linkFilename) {
+      if (getFilename(navLinks[i].href) === currentFilename) {
         currentIndex = i;
         break;
       }
@@ -142,10 +163,11 @@
 
     if (currentIndex === -1) return;
 
-    // 네비게이션 요소 생성
+    // 네비게이션 생성
     var nav = document.createElement('nav');
     nav.className = 'nav-footer';
 
+    // 이전 버튼
     if (currentIndex > 0) {
       var prev = navLinks[currentIndex - 1];
       var prevLink = document.createElement('a');
@@ -157,10 +179,12 @@
       nav.appendChild(document.createElement('span'));
     }
 
+    // 스페이서
     var spacer = document.createElement('span');
     spacer.className = 'spacer';
     nav.appendChild(spacer);
 
+    // 다음 버튼
     if (currentIndex < navLinks.length - 1) {
       var next = navLinks[currentIndex + 1];
       var nextLink = document.createElement('a');
@@ -170,7 +194,7 @@
       nav.appendChild(nextLink);
     }
 
-    // 메인 컨텐츠 영역에 추가 (Just-the-docs 구조)
+    // 메인 컨텐츠에 추가
     var mainContent = document.getElementById('main-content') ||
                       document.querySelector('.main-content') ||
                       document.querySelector('main') ||
