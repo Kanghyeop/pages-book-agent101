@@ -101,7 +101,7 @@
   function createPrevNextNav() {
     // 사이드바에서 실제 페이지 링크만 수집 (부모 섹션 제외)
     var navLinks = [];
-    document.querySelectorAll('.nav-list a.nav-list-link').forEach(function(link) {
+    document.querySelectorAll('.nav-list-item > a.nav-list-link').forEach(function(link) {
       var href = link.getAttribute('href');
       // 실제 .html 페이지만 포함 (섹션 헤더 제외)
       if (href && href.indexOf('.html') !== -1) {
@@ -114,25 +114,19 @@
 
     if (navLinks.length === 0) return;
 
-    // 경로 정규화 함수
-    function normalizePath(path) {
-      // baseurl 제거, 슬래시 정리
-      return path
-        .replace('/pages-book-agent101', '')
-        .replace(/\/+/g, '/')
-        .replace(/\/$/, '')
-        .toLowerCase();
+    // 파일명만 추출
+    function getFilename(path) {
+      var parts = path.split('/');
+      return parts[parts.length - 1].toLowerCase();
     }
 
-    // 현재 페이지 찾기
-    var currentPath = normalizePath(window.location.pathname);
+    // 현재 페이지 파일명
+    var currentFilename = getFilename(window.location.pathname);
     var currentIndex = -1;
 
     for (var i = 0; i < navLinks.length; i++) {
-      var linkPath = normalizePath(navLinks[i].href);
-      if (currentPath === linkPath ||
-          currentPath.endsWith(linkPath) ||
-          linkPath.endsWith(currentPath)) {
+      var linkFilename = getFilename(navLinks[i].href);
+      if (currentFilename === linkFilename) {
         currentIndex = i;
         break;
       }
@@ -168,8 +162,8 @@
       nav.appendChild(nextLink);
     }
 
-    // 메인 컨텐츠 영역에 추가
-    var mainContent = document.querySelector('.main-content-wrap') ||
+    // 메인 컨텐츠 영역에 추가 (Just-the-docs 구조)
+    var mainContent = document.getElementById('main-content') ||
                       document.querySelector('.main-content') ||
                       document.querySelector('main') ||
                       document.body;
