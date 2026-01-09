@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 300">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .input-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .container-bad { fill: #FAFAFA; stroke: #DDDDDD; stroke-width: 1.5; }
+    .container-good { fill: #FAFAFA; stroke: #DDDDDD; stroke-width: 1.5; }
+    .platform { fill: #FAFAFA; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .section { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #333333; }
+    .small { font-family: Pretendard, -apple-system, sans-serif; font-size: 7px; fill: #666666; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Left side: Before (No Infrastructure) -->
+  <rect x="20" y="40" width="240" height="100" rx="8" class="container-bad"/>
+  <text x="140" y="58" text-anchor="middle" class="section">인프라 없음</text>
+
+  <!-- Car (Agent) on rough terrain -->
+  <rect x="50" y="80" width="60" height="35" rx="5" class="box"/>
+  <text x="80" y="95" text-anchor="middle" class="subtitle">에이전트</text>
+  <text x="80" y="107" text-anchor="middle" class="small">LLM + 툴</text>
+
+  <!-- Rough road -->
+  <path d="M120 100 L140 95 L160 102 L180 93 L200 100 L220 95 L240 100" stroke="#666666" stroke-width="3" fill="none"/>
+  <text x="180" y="125" text-anchor="middle" class="subtitle">비포장 도로</text>
+
+  <!-- Problems -->
+  <text x="140" y="140" text-anchor="middle" class="small">보안? 권한? 비용? 로그?</text>
+
+  <!-- Right side: After (With Infrastructure) -->
+  <rect x="290" y="40" width="240" height="100" rx="8" class="container-good"/>
+  <text x="410" y="58" text-anchor="middle" class="section">인프라 구축</text>
+
+  <!-- Car (Agent) on paved road -->
+  <rect x="320" y="80" width="60" height="35" rx="5" class="box"/>
+  <text x="350" y="95" text-anchor="middle" class="subtitle">에이전트</text>
+  <text x="350" y="107" text-anchor="middle" class="small">LLM + 툴</text>
+
+  <!-- Paved road -->
+  <rect x="390" y="93" width="130" height="14" rx="3" fill="#666666" stroke="#555555" stroke-width="1"/>
+  <line x1="420" y1="100" x2="510" y2="100" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="8,4"/>
+
+  <!-- Infrastructure elements -->
+  <rect x="440" y="73" width="25" height="20" rx="3" class="box"/>
+  <text x="452" y="86" text-anchor="middle" class="small">인증</text>
+
+  <rect x="475" y="73" width="25" height="20" rx="3" class="box"/>
+  <text x="487" y="86" text-anchor="middle" class="small">모니터</text>
+
+  <text x="410" y="140" text-anchor="middle" class="small">안전하고 관리 가능</text>
+
+  <!-- Lumia Platform Section -->
+  <rect x="20" y="160" width="510" height="110" rx="10" class="platform"/>
+  <text x="275" y="180" text-anchor="middle" class="section">Lumia: 에이전트 인프라 플랫폼</text>
+
+  <!-- Four pillars -->
+  <rect x="40" y="195" width="105" height="55" rx="6" class="box"/>
+  <text x="92" y="215" text-anchor="middle" class="title">인증/권한</text>
+  <text x="92" y="230" text-anchor="middle" class="subtitle">누가 접근 가능?</text>
+  <text x="92" y="243" text-anchor="middle" class="subtitle">어떤 도구까지?</text>
+
+  <rect x="160" y="195" width="105" height="55" rx="6" class="box"/>
+  <text x="212" y="215" text-anchor="middle" class="title">모니터링</text>
+  <text x="212" y="230" text-anchor="middle" class="subtitle">무엇을 하는가?</text>
+  <text x="212" y="243" text-anchor="middle" class="subtitle">실행 로그 추적</text>
+
+  <rect x="280" y="195" width="105" height="55" rx="6" class="box"/>
+  <text x="332" y="215" text-anchor="middle" class="title">비용 관리</text>
+  <text x="332" y="230" text-anchor="middle" class="subtitle">API 호출 비용</text>
+  <text x="332" y="243" text-anchor="middle" class="subtitle">팀별 할당</text>
+
+  <rect x="400" y="195" width="110" height="55" rx="6" class="box"/>
+  <text x="455" y="215" text-anchor="middle" class="title">버전/롤백</text>
+  <text x="455" y="230" text-anchor="middle" class="subtitle">프롬프트 버전</text>
+  <text x="455" y="243" text-anchor="middle" class="subtitle">도구 버전 관리</text>
+
+  <!-- Figure caption -->
+  <text x="275" y="290" text-anchor="middle" class="figure">Figure X. 에이전트와 인프라: 자동차와 도로</text>
+</svg>

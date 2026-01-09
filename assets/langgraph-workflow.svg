@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .input-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .output-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .exception-box { fill: #FFF3CD; stroke: #DDDDDD; stroke-width: 1; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .arrow { fill: none; stroke: #333333; stroke-width: 1.5; }
+    .exception { fill: none; stroke: #666666; stroke-width: 1; stroke-dasharray: 3; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Main flow -->
+  <!-- 전화접수 -->
+  <rect x="20" y="45" width="80" height="50" rx="6" class="box"/>
+  <text x="60" y="67" text-anchor="middle" class="title">전화접수</text>
+  <text x="60" y="82" text-anchor="middle" class="subtitle">음성 AI</text>
+
+  <line x1="100" y1="70" x2="125" y2="70" class="arrow"/>
+  <polygon points="130,70 120,65 120,75" fill="#333333"/>
+
+  <!-- 결제확인 -->
+  <rect x="130" y="45" width="80" height="50" rx="6" class="box"/>
+  <text x="170" y="67" text-anchor="middle" class="title">결제확인</text>
+  <text x="170" y="82" text-anchor="middle" class="subtitle">PG 웹훅</text>
+
+  <line x1="210" y1="70" x2="235" y2="70" class="arrow"/>
+  <polygon points="240,70 230,65 230,75" fill="#333333"/>
+
+  <!-- 발주 -->
+  <rect x="240" y="45" width="80" height="50" rx="6" class="box"/>
+  <text x="280" y="67" text-anchor="middle" class="title">발주</text>
+  <text x="280" y="82" text-anchor="middle" class="subtitle">ERP 등록</text>
+
+  <line x1="320" y1="70" x2="345" y2="70" class="arrow"/>
+  <polygon points="350,70 340,65 340,75" fill="#333333"/>
+
+  <!-- 배송확인 -->
+  <rect x="350" y="45" width="80" height="50" rx="6" class="box"/>
+  <text x="390" y="67" text-anchor="middle" class="title">배송확인</text>
+  <text x="390" y="82" text-anchor="middle" class="subtitle">ERP 폴링</text>
+
+  <line x1="430" y1="70" x2="455" y2="70" class="arrow"/>
+  <polygon points="460,70 450,65 450,75" fill="#333333"/>
+
+  <!-- 완료알림 -->
+  <rect x="460" y="45" width="80" height="50" rx="6" class="output-box"/>
+  <text x="500" y="67" text-anchor="middle" class="title">완료알림</text>
+  <text x="500" y="82" text-anchor="middle" class="subtitle">문자 발송</text>
+
+  <!-- Exception handling node -->
+  <rect x="240" y="120" width="80" height="40" rx="6" class="exception-box"/>
+  <text x="280" y="145" text-anchor="middle" class="title">예외처리</text>
+
+  <!-- Exception arrows from each node -->
+  <line x1="170" y1="95" x2="170" y2="130" class="exception"/>
+  <line x1="170" y1="130" x2="235" y2="130" class="exception"/>
+  <polygon points="240,130 230,125 230,135" fill="#666666"/>
+
+  <line x1="280" y1="95" x2="280" y2="115" class="exception"/>
+  <polygon points="280,120 275,110 285,110" fill="#666666"/>
+
+  <line x1="390" y1="95" x2="390" y2="130" class="exception"/>
+  <line x1="390" y1="130" x2="325" y2="130" class="exception"/>
+  <polygon points="320,130 330,125 330,135" fill="#666666"/>
+
+  <!-- Loop back for 배송중 -->
+  <path d="M 390 95 Q 390 110 420 110 Q 450 110 450 70" fill="none" stroke="#666666" stroke-width="1" stroke-dasharray="3"/>
+  <text x="425" y="105" class="subtitle">배송중</text>
+
+  <!-- Figure caption -->
+  <text x="300" y="185" text-anchor="middle" class="figure">Figure X. 근조화환 워크플로우</text>
+</svg>

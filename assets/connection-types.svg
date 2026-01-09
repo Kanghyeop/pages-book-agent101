@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 300">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .input-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .container { fill: #FAFAFA; stroke: #DDDDDD; stroke-width: 1; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .section { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #333333; }
+    .small { font-family: Pretendard, -apple-system, sans-serif; font-size: 7px; fill: #666666; }
+    .arrow { stroke: #333333; stroke-width: 1.5; fill: none; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- API Section -->
+  <rect x="20" y="40" width="160" height="70" rx="6" class="container"/>
+  <text x="100" y="58" text-anchor="middle" class="section">1. API</text>
+
+  <rect x="35" y="70" width="50" height="25" rx="4" class="box"/>
+  <text x="60" y="87" text-anchor="middle" class="small">에이전트</text>
+
+  <line x1="85" y1="82" x2="110" y2="82" class="arrow"/>
+  <polygon points="115,82 105,77 105,87" fill="#333333"/>
+
+  <rect x="115" y="70" width="50" height="25" rx="4" class="input-box"/>
+  <text x="140" y="87" text-anchor="middle" class="small">서비스</text>
+
+  <!-- MCP Section -->
+  <rect x="195" y="40" width="160" height="70" rx="6" class="container"/>
+  <text x="275" y="58" text-anchor="middle" class="section">2. MCP</text>
+
+  <rect x="205" y="70" width="40" height="25" rx="4" class="box"/>
+  <text x="225" y="87" text-anchor="middle" class="small">에이전트</text>
+
+  <line x1="245" y1="82" x2="260" y2="82" class="arrow"/>
+  <line x1="275" y1="82" x2="260" y2="82" class="arrow"/>
+
+  <rect x="260" y="70" width="30" height="25" rx="4" class="box"/>
+  <text x="275" y="87" text-anchor="middle" class="small">MCP</text>
+
+  <line x1="290" y1="82" x2="305" y2="82" class="arrow"/>
+  <polygon points="310,82 300,77 300,87" fill="#333333"/>
+
+  <rect x="310" y="70" width="40" height="25" rx="4" class="input-box"/>
+  <text x="330" y="87" text-anchor="middle" class="small">서비스</text>
+
+  <!-- A2A Section -->
+  <rect x="370" y="40" width="160" height="70" rx="6" class="container"/>
+  <text x="450" y="58" text-anchor="middle" class="section">3. A2A</text>
+
+  <rect x="382" y="70" width="40" height="25" rx="4" class="box"/>
+  <text x="402" y="87" text-anchor="middle" class="small">Agent A</text>
+
+  <line x1="422" y1="82" x2="437" y2="82" class="arrow"/>
+  <line x1="452" y1="82" x2="437" y2="82" class="arrow"/>
+
+  <rect x="437" y="70" width="40" height="25" rx="4" class="box"/>
+  <text x="457" y="87" text-anchor="middle" class="small">Agent B</text>
+
+  <line x1="477" y1="82" x2="492" y2="82" class="arrow"/>
+  <line x1="507" y1="82" x2="492" y2="82" class="arrow"/>
+
+  <rect x="492" y="70" width="40" height="25" rx="4" class="box"/>
+  <text x="512" y="87" text-anchor="middle" class="small">Agent C</text>
+
+  <!-- Comparison Table -->
+  <rect x="20" y="125" width="510" height="140" rx="6" class="container"/>
+
+  <!-- Table Header -->
+  <line x1="20" y1="150" x2="530" y2="150" stroke="#DDDDDD" stroke-width="1"/>
+  <line x1="150" y1="125" x2="150" y2="265" stroke="#DDDDDD" stroke-width="1"/>
+  <line x1="280" y1="125" x2="280" y2="265" stroke="#DDDDDD" stroke-width="1"/>
+  <line x1="405" y1="125" x2="405" y2="265" stroke="#DDDDDD" stroke-width="1"/>
+
+  <text x="85" y="142" text-anchor="middle" class="section">항목</text>
+  <text x="215" y="142" text-anchor="middle" class="section">API</text>
+  <text x="342" y="142" text-anchor="middle" class="section">MCP</text>
+  <text x="467" y="142" text-anchor="middle" class="section">A2A</text>
+
+  <!-- Row 1: 연결 대상 -->
+  <line x1="20" y1="175" x2="530" y2="175" stroke="#EEEEEE" stroke-width="1"/>
+  <text x="85" y="167" text-anchor="middle" class="subtitle">연결 대상</text>
+  <text x="215" y="167" text-anchor="middle" class="subtitle">외부 서비스</text>
+  <text x="342" y="167" text-anchor="middle" class="subtitle">도구/플러그인</text>
+  <text x="467" y="167" text-anchor="middle" class="subtitle">다른 에이전트</text>
+
+  <!-- Row 2: 통신 방향 -->
+  <line x1="20" y1="200" x2="530" y2="200" stroke="#EEEEEE" stroke-width="1"/>
+  <text x="85" y="192" text-anchor="middle" class="subtitle">통신 방향</text>
+  <text x="215" y="192" text-anchor="middle" class="subtitle">단방향</text>
+  <text x="342" y="192" text-anchor="middle" class="subtitle">양방향</text>
+  <text x="467" y="192" text-anchor="middle" class="subtitle">양방향</text>
+
+  <!-- Row 3: 표준화 -->
+  <line x1="20" y1="225" x2="530" y2="225" stroke="#EEEEEE" stroke-width="1"/>
+  <text x="85" y="217" text-anchor="middle" class="subtitle">표준화</text>
+  <text x="215" y="217" text-anchor="middle" class="subtitle">서비스마다 다름</text>
+  <text x="342" y="217" text-anchor="middle" class="subtitle">Anthropic 표준</text>
+  <text x="467" y="217" text-anchor="middle" class="subtitle">Google 표준</text>
+
+  <!-- Row 4: 비유 -->
+  <text x="85" y="250" text-anchor="middle" class="subtitle">비유</text>
+  <text x="215" y="250" text-anchor="middle" class="subtitle">전화 거는 것</text>
+  <text x="342" y="250" text-anchor="middle" class="subtitle">도구 사용법</text>
+  <text x="467" y="250" text-anchor="middle" class="subtitle">팀원과 대화</text>
+
+  <!-- Figure caption -->
+  <text x="275" y="290" text-anchor="middle" class="figure">Figure X. 연결 방식 비교: API vs MCP vs A2A</text>
+</svg>

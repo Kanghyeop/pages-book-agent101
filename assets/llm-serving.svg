@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .input-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .output-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .arrow { fill: none; stroke: #333333; stroke-width: 1.5; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Model File -->
+  <rect x="20" y="50" width="100" height="60" rx="8" class="input-box"/>
+  <text x="70" y="75" text-anchor="middle" class="title">모델 파일</text>
+  <text x="70" y="92" text-anchor="middle" class="subtitle">수십~수백 GB</text>
+
+  <!-- Arrow -->
+  <line x1="120" y1="80" x2="150" y2="80" class="arrow"/>
+  <polygon points="155,80 145,75 145,85" fill="#333333"/>
+
+  <!-- Serving Infrastructure -->
+  <rect x="155" y="40" width="140" height="80" rx="8" class="box"/>
+  <text x="225" y="65" text-anchor="middle" class="title">Serving 인프라</text>
+  <text x="225" y="82" text-anchor="middle" class="subtitle">GPU 서버</text>
+  <text x="225" y="96" text-anchor="middle" class="subtitle">요청 처리 로직</text>
+  <text x="225" y="110" text-anchor="middle" class="subtitle">API 엔드포인트</text>
+
+  <!-- Arrow -->
+  <line x1="295" y1="80" x2="325" y2="80" class="arrow"/>
+  <polygon points="330,80 320,75 320,85" fill="#333333"/>
+
+  <!-- API Endpoint -->
+  <rect x="330" y="50" width="150" height="60" rx="8" class="box"/>
+  <text x="405" y="75" text-anchor="middle" class="title">API 엔드포인트</text>
+  <text x="405" y="92" text-anchor="middle" class="subtitle">api.openai.com/v1/chat</text>
+
+  <!-- Users -->
+  <rect x="330" y="140" width="150" height="40" rx="8" class="output-box"/>
+  <text x="405" y="165" text-anchor="middle" class="title">전 세계 사용자</text>
+
+  <!-- Arrow from users to API -->
+  <line x1="405" y1="140" x2="405" y2="115" class="arrow"/>
+  <polygon points="405,110 400,120 410,120" fill="#333333"/>
+
+  <!-- Figure caption -->
+  <text x="250" y="210" text-anchor="middle" class="figure">Figure X. LLM Serving 구조</text>
+</svg>

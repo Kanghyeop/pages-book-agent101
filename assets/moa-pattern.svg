@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 260">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .input-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .output-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .arrow { stroke: #333333; stroke-width: 1.5; fill: none; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Input -->
+  <rect x="30" y="90" width="70" height="40" rx="6" class="input-box"/>
+  <text x="65" y="115" text-anchor="middle" class="title">질문</text>
+
+  <!-- Same question to all agents -->
+  <line x1="100" y1="110" x2="150" y2="55" class="arrow"/>
+  <line x1="100" y1="110" x2="155" y2="110" class="arrow"/>
+  <line x1="100" y1="110" x2="150" y2="165" class="arrow"/>
+
+  <!-- Agent 1 -->
+  <rect x="160" y="30" width="100" height="50" rx="6" class="box"/>
+  <text x="210" y="52" text-anchor="middle" class="title">GPT-4</text>
+  <text x="210" y="68" text-anchor="middle" class="subtitle">응답 A</text>
+
+  <!-- Agent 2 -->
+  <rect x="160" y="85" width="100" height="50" rx="6" class="box"/>
+  <text x="210" y="107" text-anchor="middle" class="title">Claude</text>
+  <text x="210" y="123" text-anchor="middle" class="subtitle">응답 B</text>
+
+  <!-- Agent 3 -->
+  <rect x="160" y="140" width="100" height="50" rx="6" class="box"/>
+  <text x="210" y="162" text-anchor="middle" class="title">Gemini</text>
+  <text x="210" y="178" text-anchor="middle" class="subtitle">응답 C</text>
+
+  <!-- Arrows to aggregator -->
+  <line x1="260" y1="55" x2="310" y2="100" class="arrow"/>
+  <line x1="260" y1="110" x2="305" y2="110" class="arrow"/>
+  <line x1="260" y1="165" x2="310" y2="120" class="arrow"/>
+  <polygon points="315,110 305,105 305,115" fill="#333333"/>
+
+  <!-- Aggregator -->
+  <rect x="320" y="75" width="100" height="70" rx="8" class="box"/>
+  <text x="370" y="102" text-anchor="middle" class="title">Aggregator</text>
+  <text x="370" y="118" text-anchor="middle" class="subtitle">(종합 에이전트)</text>
+  <text x="370" y="135" text-anchor="middle" class="subtitle">최선의 답 선택</text>
+
+  <!-- Output -->
+  <line x1="420" y1="110" x2="445" y2="110" class="arrow"/>
+  <polygon points="450,110 440,105 440,115" fill="#333333"/>
+
+  <rect x="450" y="90" width="40" height="40" rx="6" class="output-box"/>
+  <text x="470" y="115" text-anchor="middle" class="title">결과</text>
+
+  <!-- Legend -->
+  <text x="250" y="220" text-anchor="middle" class="subtitle">같은 질문 → 여러 에이전트 → 응답 종합 → 최적 결과</text>
+
+  <!-- Figure caption -->
+  <text x="250" y="250" text-anchor="middle" class="figure">Figure X. Mixture of Agents: 여러 관점 종합</text>
+</svg>

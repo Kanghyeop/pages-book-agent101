@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 270">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .input-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .output-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .container { fill: #FAFAFA; stroke: #DDDDDD; stroke-width: 1; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 8px; fill: #666666; }
+    .edge { font-family: Pretendard, -apple-system, sans-serif; font-size: 8px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .section { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .arrow { fill: none; stroke: #666666; stroke-width: 1; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Left side: Question -->
+  <rect x="20" y="100" width="100" height="50" rx="6" class="input-box"/>
+  <text x="70" y="120" text-anchor="middle" class="section">질문</text>
+  <text x="70" y="135" text-anchor="middle" class="subtitle">"김 부장 프로젝트</text>
+  <text x="70" y="145" text-anchor="middle" class="subtitle">예산은?"</text>
+
+  <!-- Arrow -->
+  <line x1="120" y1="125" x2="150" y2="125" class="arrow"/>
+  <polygon points="155,125 145,120 145,130" fill="#666666"/>
+
+  <!-- Graph structure -->
+  <rect x="155" y="45" width="240" height="160" rx="10" class="container"/>
+  <text x="275" y="65" text-anchor="middle" class="section">지식 그래프</text>
+
+  <!-- Nodes -->
+  <circle cx="200" cy="125" r="25" class="box" stroke="#DDDDDD"/>
+  <text x="200" y="128" text-anchor="middle" class="title">김 부장</text>
+
+  <circle cx="290" cy="90" r="25" class="box" stroke="#DDDDDD"/>
+  <text x="290" y="93" text-anchor="middle" class="title">프로젝트A</text>
+
+  <circle cx="350" cy="150" r="25" class="box" stroke="#DDDDDD"/>
+  <text x="350" y="148" text-anchor="middle" class="title">예산</text>
+  <text x="350" y="160" text-anchor="middle" class="subtitle">1억원</text>
+
+  <circle cx="220" cy="175" r="20" class="box" stroke="#DDDDDD"/>
+  <text x="220" y="178" text-anchor="middle" style="font-size:9px;fill:#333333;">팀원B</text>
+
+  <!-- Edges -->
+  <line x1="220" y1="108" x2="268" y2="98" stroke="#333333" stroke-width="1.5"/>
+  <text x="240" y="95" class="edge">담당</text>
+
+  <line x1="310" y1="105" x2="330" y2="132" stroke="#333333" stroke-width="1.5"/>
+  <text x="330" y="115" class="edge">속성</text>
+
+  <line x1="210" y1="148" x2="215" y2="158" stroke="#333333" stroke-width="1"/>
+  <text x="195" y="160" class="edge">소속</text>
+
+  <!-- Arrow to answer -->
+  <line x1="395" y1="125" x2="420" y2="125" class="arrow"/>
+  <polygon points="425,125 415,120 415,130" fill="#666666"/>
+
+  <!-- Answer -->
+  <rect x="425" y="100" width="65" height="50" rx="6" class="output-box"/>
+  <text x="457" y="120" text-anchor="middle" class="section">답변</text>
+  <text x="457" y="138" text-anchor="middle" class="subtitle">"1억원"</text>
+
+  <!-- Bottom note -->
+  <text x="250" y="235" text-anchor="middle" class="subtitle">관계를 따라가며 정확한 정보 도출</text>
+
+  <!-- Figure caption -->
+  <text x="250" y="260" text-anchor="middle" class="figure">Figure X. GraphRAG: 관계를 따라가는 검색</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 180">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .input-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .output-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .arrow { fill: none; stroke: #333333; stroke-width: 1.5; }
+    .stage { font-family: Pretendard, -apple-system, sans-serif; font-size: 8px; fill: #666666; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Input -->
+  <rect x="20" y="55" width="70" height="50" rx="6" class="input-box"/>
+  <text x="55" y="77" text-anchor="middle" class="title">입력</text>
+  <text x="55" y="92" text-anchor="middle" class="subtitle">(Excel)</text>
+
+  <!-- Arrow -->
+  <line x1="90" y1="80" x2="110" y2="80" class="arrow"/>
+  <polygon points="115,80 105,75 105,85" fill="#333333"/>
+
+  <!-- Stage 1 -->
+  <rect x="115" y="55" width="80" height="50" rx="6" class="box"/>
+  <text x="155" y="75" text-anchor="middle" class="title">1. 파싱</text>
+  <text x="155" y="90" text-anchor="middle" class="subtitle">Excel → 숫자</text>
+  <text x="155" y="115" text-anchor="middle" class="stage">(Encoder)</text>
+
+  <!-- Arrow -->
+  <line x1="195" y1="80" x2="215" y2="80" class="arrow"/>
+  <polygon points="220,80 210,75 210,85" fill="#333333"/>
+
+  <!-- Stage 2 -->
+  <rect x="220" y="55" width="80" height="50" rx="6" class="box"/>
+  <text x="260" y="75" text-anchor="middle" class="title">2. 검증</text>
+  <text x="260" y="90" text-anchor="middle" class="subtitle">유효성 체크</text>
+
+  <!-- Arrow -->
+  <line x1="300" y1="80" x2="320" y2="80" class="arrow"/>
+  <polygon points="325,80 315,75 315,85" fill="#333333"/>
+
+  <!-- Stage 3 -->
+  <rect x="325" y="55" width="80" height="50" rx="6" class="box"/>
+  <text x="365" y="75" text-anchor="middle" class="title">3. 처리</text>
+  <text x="365" y="90" text-anchor="middle" class="subtitle">최적화/계산</text>
+  <text x="365" y="115" text-anchor="middle" class="stage">(핵심 로직)</text>
+
+  <!-- Arrow -->
+  <line x1="405" y1="80" x2="425" y2="80" class="arrow"/>
+  <polygon points="430,80 420,75 420,85" fill="#333333"/>
+
+  <!-- Stage 4 -->
+  <rect x="430" y="55" width="80" height="50" rx="6" class="box"/>
+  <text x="470" y="75" text-anchor="middle" class="title">4. 변환</text>
+  <text x="470" y="90" text-anchor="middle" class="subtitle">숫자 → Excel</text>
+  <text x="470" y="115" text-anchor="middle" class="stage">(Decoder)</text>
+
+  <!-- Output indicator -->
+  <line x1="510" y1="80" x2="530" y2="80" class="arrow"/>
+  <polygon points="535,80 525,75 525,85" fill="#333333"/>
+  <text x="545" y="85" text-anchor="start" class="subtitle">출력</text>
+
+  <!-- Bottom note -->
+  <text x="280" y="150" text-anchor="middle" class="subtitle">각 단계가 독립적 → 문제 발생 시 해당 단계만 수정</text>
+
+  <!-- Figure caption -->
+  <text x="280" y="170" text-anchor="middle" class="figure">Figure X. 파이프라인 흐름</text>
+</svg>

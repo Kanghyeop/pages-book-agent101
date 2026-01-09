@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 250">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .section { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #333333; }
+    .time { font-family: Pretendard, -apple-system, sans-serif; font-size: 8px; fill: #666666; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Sequential Section -->
+  <rect x="20" y="40" width="230" height="85" rx="6" fill="#FAFAFA" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="135" y="58" text-anchor="middle" class="section">순차 처리</text>
+
+  <!-- Sequential boxes in a row -->
+  <rect x="30" y="68" width="45" height="25" rx="3" class="box"/>
+  <text x="52" y="85" text-anchor="middle" class="time">A 2초</text>
+
+  <rect x="80" y="68" width="45" height="25" rx="3" class="box"/>
+  <text x="102" y="85" text-anchor="middle" class="time">B 2초</text>
+
+  <rect x="130" y="68" width="45" height="25" rx="3" class="box"/>
+  <text x="152" y="85" text-anchor="middle" class="time">C 2초</text>
+
+  <rect x="180" y="68" width="45" height="25" rx="3" class="box"/>
+  <text x="202" y="85" text-anchor="middle" class="time">D 2초</text>
+
+  <!-- Timeline bar -->
+  <line x1="30" y1="102" x2="225" y2="102" stroke="#666666" stroke-width="2"/>
+  <text x="135" y="118" text-anchor="middle" class="subtitle">총 8초 소요</text>
+
+  <!-- Parallel Section -->
+  <rect x="270" y="40" width="230" height="85" rx="6" fill="#FAFAFA" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="385" y="58" text-anchor="middle" class="section">병렬 처리</text>
+
+  <!-- Parallel boxes stacked -->
+  <rect x="290" y="68" width="80" height="22" rx="3" class="box"/>
+  <text x="330" y="83" text-anchor="middle" class="time">A 2초</text>
+
+  <rect x="290" y="93" width="80" height="22" rx="3" class="box"/>
+  <text x="330" y="108" text-anchor="middle" class="time">B 2초</text>
+
+  <rect x="400" y="68" width="80" height="22" rx="3" class="box"/>
+  <text x="440" y="83" text-anchor="middle" class="time">C 2초</text>
+
+  <rect x="400" y="93" width="80" height="22" rx="3" class="box"/>
+  <text x="440" y="108" text-anchor="middle" class="time">D 2초</text>
+
+  <!-- Timeline bar for parallel -->
+  <line x1="290" y1="118" x2="370" y2="118" stroke="#333333" stroke-width="2"/>
+  <text x="435" y="118" text-anchor="middle" class="subtitle">총 2초 소요</text>
+
+  <!-- Use cases -->
+  <rect x="20" y="145" width="480" height="70" rx="6" fill="#FAFAFA" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="260" y="165" text-anchor="middle" class="section">병렬 처리가 유리한 경우</text>
+
+  <text x="135" y="188" text-anchor="middle" class="subtitle">여러 문서 동시 분석</text>
+  <text x="135" y="203" text-anchor="middle" class="subtitle">(각각 독립적)</text>
+
+  <text x="385" y="188" text-anchor="middle" class="subtitle">여러 API 동시 호출</text>
+  <text x="385" y="203" text-anchor="middle" class="subtitle">(결과 나중에 종합)</text>
+
+  <!-- Figure caption -->
+  <text x="260" y="240" text-anchor="middle" class="figure">Figure X. Parallelization: 순차 vs 병렬</text>
+</svg>

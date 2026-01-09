@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 180">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 16px; font-weight: 600; fill: #333333; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Chain -->
+  <rect x="20" y="50" width="140" height="90" rx="8" class="box"/>
+  <text x="90" y="80" text-anchor="middle" class="title">Chain</text>
+  <text x="90" y="100" text-anchor="middle" class="subtitle">여러 단계를</text>
+  <text x="90" y="115" text-anchor="middle" class="subtitle">순서대로 연결</text>
+
+  <!-- Prompt Template -->
+  <rect x="180" y="50" width="140" height="90" rx="8" class="box"/>
+  <text x="250" y="80" text-anchor="middle" class="title">Prompt Template</text>
+  <text x="250" y="100" text-anchor="middle" class="subtitle">프롬프트 틀에</text>
+  <text x="250" y="115" text-anchor="middle" class="subtitle">변수만 교체</text>
+
+  <!-- Memory -->
+  <rect x="340" y="50" width="140" height="90" rx="8" class="box"/>
+  <text x="410" y="80" text-anchor="middle" class="title">Memory</text>
+  <text x="410" y="100" text-anchor="middle" class="subtitle">대화 기록</text>
+  <text x="410" y="115" text-anchor="middle" class="subtitle">저장/유지</text>
+
+  <!-- Figure caption -->
+  <text x="250" y="168" text-anchor="middle" class="figure">Figure X. LangChain 핵심 개념</text>
+</svg>

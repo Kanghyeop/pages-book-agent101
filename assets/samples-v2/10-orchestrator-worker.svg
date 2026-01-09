@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+  <style>
+    .box { stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .arrow { stroke: #333333; stroke-width: 1.5; fill: none; }
+    .return-arrow { stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4,2; }
+    .legend { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Input -->
+  <rect x="30" y="100" width="80" height="40" rx="6" fill="#F5F5F5" class="box"/>
+  <text x="70" y="125" text-anchor="middle" class="title">복잡한 작업</text>
+
+  <!-- Orchestrator (single blue) -->
+  <rect x="150" y="80" width="100" height="80" rx="10" fill="#E3F2FD" class="box"/>
+  <text x="200" y="110" text-anchor="middle" class="title">Orchestrator</text>
+  <text x="200" y="125" text-anchor="middle" class="subtitle">(팀장)</text>
+  <text x="200" y="145" text-anchor="middle" class="subtitle">작업 분해/배분</text>
+
+  <!-- Workers (all same single blue) -->
+  <rect x="300" y="30" width="80" height="50" rx="6" fill="#E3F2FD" class="box"/>
+  <text x="340" y="52" text-anchor="middle" class="title">Worker A</text>
+  <text x="340" y="68" text-anchor="middle" class="subtitle">검색 담당</text>
+
+  <rect x="300" y="95" width="80" height="50" rx="6" fill="#E3F2FD" class="box"/>
+  <text x="340" y="117" text-anchor="middle" class="title">Worker B</text>
+  <text x="340" y="133" text-anchor="middle" class="subtitle">분석 담당</text>
+
+  <rect x="300" y="160" width="80" height="50" rx="6" fill="#E3F2FD" class="box"/>
+  <text x="340" y="182" text-anchor="middle" class="title">Worker C</text>
+  <text x="340" y="198" text-anchor="middle" class="subtitle">작성 담당</text>
+
+  <!-- Output (중립 회색) -->
+  <rect x="430" y="100" width="55" height="40" rx="6" fill="#F5F5F5" class="box"/>
+  <text x="457" y="125" text-anchor="middle" class="title">결과</text>
+
+  <!-- Arrows -->
+  <line x1="110" y1="120" x2="145" y2="120" class="arrow"/>
+  <polygon points="150,120 140,115 140,125" fill="#333333"/>
+
+  <!-- To workers -->
+  <line x1="250" y1="100" x2="295" y2="55" class="arrow"/>
+  <polygon points="300,55 290,50 290,60" fill="#333333"/>
+
+  <line x1="250" y1="120" x2="295" y2="120" class="arrow"/>
+  <polygon points="300,120 290,115 290,125" fill="#333333"/>
+
+  <line x1="250" y1="140" x2="295" y2="185" class="arrow"/>
+  <polygon points="300,185 290,180 290,190" fill="#333333"/>
+
+  <!-- From workers to output (dashed gray) -->
+  <line x1="380" y1="55" x2="425" y2="105" class="return-arrow"/>
+  <line x1="380" y1="120" x2="425" y2="120" class="return-arrow"/>
+  <line x1="380" y1="185" x2="425" y2="135" class="return-arrow"/>
+
+  <!-- Arrow to output -->
+  <polygon points="430,120 420,115 420,125" fill="#666666"/>
+
+  <!-- Legend -->
+  <text x="250" y="250" text-anchor="middle" class="legend">팀장이 작업을 나누고, 팀원들의 결과를 종합</text>
+
+  <!-- Figure caption -->
+  <text x="250" y="285" text-anchor="middle" class="figure">Figure X-10. Orchestrator-Worker 패턴</text>
+</svg>

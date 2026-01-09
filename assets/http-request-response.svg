@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .input-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .output-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .code { font-family: Consolas, monospace; font-size: 9px; fill: #666666; }
+    .label { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; fill: #333333; }
+    .arrow { fill: none; stroke: #333333; stroke-width: 1.5; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Client -->
+  <rect x="20" y="60" width="80" height="60" rx="8" class="box"/>
+  <text x="60" y="85" text-anchor="middle" class="title">클라이언트</text>
+  <text x="60" y="100" text-anchor="middle" class="code">(브라우저/앱)</text>
+
+  <!-- Request Arrow -->
+  <line x1="100" y1="75" x2="180" y2="75" class="arrow"/>
+  <polygon points="185,75 175,70 175,80" fill="#333333"/>
+  <text x="140" y="65" text-anchor="middle" class="label">Request</text>
+
+  <!-- Request Box -->
+  <rect x="190" y="30" width="120" height="55" rx="5" class="input-box"/>
+  <text x="250" y="48" text-anchor="middle" class="code">GET /weather HTTP/1.1</text>
+  <text x="250" y="62" text-anchor="middle" class="code">Host: api.example.com</text>
+  <text x="250" y="76" text-anchor="middle" class="code">Authorization: Bearer...</text>
+
+  <!-- Server -->
+  <rect x="400" y="60" width="80" height="60" rx="8" class="box"/>
+  <text x="440" y="85" text-anchor="middle" class="title">서버</text>
+  <text x="440" y="100" text-anchor="middle" class="code">(API)</text>
+
+  <!-- Response Arrow -->
+  <line x1="395" y1="105" x2="105" y2="105" class="arrow"/>
+  <polygon points="100,105 110,100 110,110" fill="#333333"/>
+  <text x="250" y="120" text-anchor="middle" class="label">Response</text>
+
+  <!-- Response Box -->
+  <rect x="190" y="130" width="120" height="45" rx="5" class="output-box"/>
+  <text x="250" y="148" text-anchor="middle" class="code">HTTP/1.1 200 OK</text>
+  <text x="250" y="162" text-anchor="middle" class="code">{"temp": 15, "city": "seoul"}</text>
+
+  <!-- Arrow from Request to Server -->
+  <line x1="310" y1="57" x2="395" y2="75" class="arrow"/>
+  <polygon points="400,76 388,78 392,68" fill="#333333"/>
+
+  <!-- Arrow from Server to Response -->
+  <line x1="395" y1="105" x2="315" y2="140" class="arrow"/>
+  <polygon points="310,143 322,138 318,148" fill="#333333"/>
+
+  <!-- Figure caption -->
+  <text x="250" y="190" text-anchor="middle" class="figure">Figure X. HTTP Request/Response 구조</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 240">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .input-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .item { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .arrow { fill: none; stroke: #333333; stroke-width: 1.5; }
+    .divider { stroke: #DDDDDD; stroke-width: 1; stroke-dasharray: 4; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- User -->
+  <circle cx="50" cy="110" r="25" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="1.5"/>
+  <text x="50" y="115" text-anchor="middle" class="title">사용자</text>
+
+  <!-- Arrow to Frontend -->
+  <line x1="75" y1="110" x2="105" y2="110" class="arrow"/>
+  <polygon points="110,110 100,105 100,115" fill="#333333"/>
+
+  <!-- Frontend Box -->
+  <rect x="110" y="45" width="140" height="130" rx="10" class="box"/>
+  <text x="180" y="70" text-anchor="middle" class="title">Frontend</text>
+  <text x="180" y="88" text-anchor="middle" class="subtitle">(사용자가 보는 화면)</text>
+  <line x1="125" y1="98" x2="235" y2="98" stroke="#DDDDDD" stroke-width="0.5"/>
+  <text x="180" y="115" text-anchor="middle" class="item">버튼, 입력창</text>
+  <text x="180" y="130" text-anchor="middle" class="item">결과 표시</text>
+  <text x="180" y="145" text-anchor="middle" class="item">React, Streamlit</text>
+  <text x="180" y="160" text-anchor="middle" class="item">HTML, CSS, JS</text>
+
+  <!-- Divider -->
+  <line x1="270" y1="45" x2="270" y2="175" class="divider"/>
+  <text x="270" y="190" text-anchor="middle" class="subtitle">HTTP</text>
+
+  <!-- Backend Box -->
+  <rect x="290" y="45" width="140" height="130" rx="10" class="box"/>
+  <text x="360" y="70" text-anchor="middle" class="title">Backend</text>
+  <text x="360" y="88" text-anchor="middle" class="subtitle">(서버에서 동작)</text>
+  <line x1="305" y1="98" x2="415" y2="98" stroke="#DDDDDD" stroke-width="0.5"/>
+  <text x="360" y="115" text-anchor="middle" class="item">데이터 처리</text>
+  <text x="360" y="130" text-anchor="middle" class="item">API 호출</text>
+  <text x="360" y="145" text-anchor="middle" class="item">비즈니스 로직</text>
+  <text x="360" y="160" text-anchor="middle" class="item">Python, FastAPI</text>
+
+  <!-- Arrow to DB/External -->
+  <line x1="430" y1="110" x2="460" y2="110" class="arrow"/>
+  <polygon points="465,110 455,105 455,115" fill="#333333"/>
+
+  <!-- External -->
+  <rect x="465" y="90" width="30" height="40" rx="5" class="input-box"/>
+  <text x="480" y="115" text-anchor="middle" class="item">DB</text>
+
+  <!-- Figure caption -->
+  <text x="250" y="230" text-anchor="middle" class="figure">Figure X. Frontend vs Backend 구조</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 220">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .code { font-family: Consolas, monospace; font-size: 8px; fill: #666666; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- 관계형 DB -->
+  <rect x="20" y="50" width="120" height="130" rx="8" class="box"/>
+  <text x="80" y="75" text-anchor="middle" class="title">관계형 DB</text>
+  <text x="80" y="92" text-anchor="middle" class="subtitle">(SQL)</text>
+  <!-- Table icon -->
+  <rect x="40" y="105" width="80" height="50" fill="#FFFFFF" stroke="#DDDDDD" stroke-width="1"/>
+  <line x1="40" y1="120" x2="120" y2="120" stroke="#DDDDDD" stroke-width="1"/>
+  <line x1="40" y1="135" x2="120" y2="135" stroke="#DDDDDD" stroke-width="1"/>
+  <line x1="70" y1="105" x2="70" y2="155" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="80" y="170" text-anchor="middle" class="subtitle">행과 열</text>
+
+  <!-- 문서 DB -->
+  <rect x="155" y="50" width="120" height="130" rx="8" class="box"/>
+  <text x="215" y="75" text-anchor="middle" class="title">문서 DB</text>
+  <text x="215" y="92" text-anchor="middle" class="subtitle">(NoSQL)</text>
+  <!-- JSON icon -->
+  <rect x="175" y="105" width="80" height="50" rx="5" fill="#FFFFFF" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="215" y="125" text-anchor="middle" class="code">{"name": "...",</text>
+  <text x="215" y="138" text-anchor="middle" class="code"> "data": [...]}</text>
+  <text x="215" y="170" text-anchor="middle" class="subtitle">유연한 구조</text>
+
+  <!-- 그래프 DB -->
+  <rect x="290" y="50" width="120" height="130" rx="8" class="box"/>
+  <text x="350" y="75" text-anchor="middle" class="title">그래프 DB</text>
+  <text x="350" y="92" text-anchor="middle" class="subtitle">(Neo4j)</text>
+  <!-- Graph icon -->
+  <circle cx="330" cy="120" r="8" fill="#FFFFFF" stroke="#333333" stroke-width="1"/>
+  <circle cx="370" cy="110" r="8" fill="#FFFFFF" stroke="#333333" stroke-width="1"/>
+  <circle cx="350" cy="145" r="8" fill="#FFFFFF" stroke="#333333" stroke-width="1"/>
+  <line x1="335" y1="115" x2="363" y2="113" stroke="#333333" stroke-width="1"/>
+  <line x1="335" y1="125" x2="345" y2="140" stroke="#333333" stroke-width="1"/>
+  <line x1="358" y1="145" x2="365" y2="118" stroke="#333333" stroke-width="1"/>
+  <text x="350" y="170" text-anchor="middle" class="subtitle">관계 저장</text>
+
+  <!-- 벡터 DB -->
+  <rect x="425" y="50" width="120" height="130" rx="8" class="box"/>
+  <text x="485" y="75" text-anchor="middle" class="title">벡터 DB</text>
+  <text x="485" y="92" text-anchor="middle" class="subtitle">(Pinecone)</text>
+  <!-- Vector icon -->
+  <line x1="450" y1="130" x2="520" y2="130" stroke="#DDDDDD" stroke-width="1"/>
+  <circle cx="460" cy="115" r="5" fill="#666666"/>
+  <circle cx="480" cy="140" r="5" fill="#666666"/>
+  <circle cx="505" cy="120" r="5" fill="#666666"/>
+  <circle cx="470" cy="135" r="5" fill="#666666"/>
+  <text x="485" y="170" text-anchor="middle" class="subtitle">유사도 검색</text>
+
+  <!-- Figure caption -->
+  <text x="275" y="210" text-anchor="middle" class="figure">Figure X. 데이터베이스 4가지 종류</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 250">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .input-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .output-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .arrow { stroke: #333333; stroke-width: 1.5; fill: none; }
+    .feedback { stroke: #666666; stroke-width: 1.5; fill: none; stroke-dasharray: 5,3; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Feedback label -->
+  <rect x="220" y="45" width="80" height="22" rx="4" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="260" y="60" text-anchor="middle" class="subtitle">피드백: 수정 필요</text>
+
+  <!-- Input -->
+  <rect x="20" y="105" width="70" height="40" rx="6" class="input-box"/>
+  <text x="55" y="130" text-anchor="middle" class="title">요청</text>
+
+  <!-- Generator -->
+  <rect x="120" y="90" width="100" height="70" rx="8" class="box"/>
+  <text x="170" y="115" text-anchor="middle" class="title">Generator</text>
+  <text x="170" y="130" text-anchor="middle" class="subtitle">(생성자)</text>
+  <text x="170" y="145" text-anchor="middle" class="subtitle">결과물 생성</text>
+
+  <!-- Draft -->
+  <rect x="250" y="105" width="60" height="40" rx="6" class="box"/>
+  <text x="280" y="130" text-anchor="middle" class="title">초안</text>
+
+  <!-- Evaluator -->
+  <rect x="340" y="90" width="100" height="70" rx="8" class="box"/>
+  <text x="390" y="115" text-anchor="middle" class="title">Evaluator</text>
+  <text x="390" y="130" text-anchor="middle" class="subtitle">(평가자)</text>
+  <text x="390" y="145" text-anchor="middle" class="subtitle">품질 검토</text>
+
+  <!-- Output -->
+  <rect x="420" y="185" width="60" height="40" rx="6" class="output-box"/>
+  <text x="450" y="210" text-anchor="middle" class="title">완성!</text>
+
+  <!-- Arrows -->
+  <line x1="90" y1="125" x2="115" y2="125" class="arrow"/>
+  <polygon points="120,125 110,120 110,130" fill="#333333"/>
+
+  <line x1="220" y1="125" x2="245" y2="125" class="arrow"/>
+  <polygon points="250,125 240,120 240,130" fill="#333333"/>
+
+  <line x1="310" y1="125" x2="335" y2="125" class="arrow"/>
+  <polygon points="340,125 330,120 330,130" fill="#333333"/>
+
+  <!-- Pass arrow -->
+  <line x1="415" y1="160" x2="440" y2="180" class="arrow"/>
+  <polygon points="445,185 437,175 447,177" fill="#333333"/>
+  <text x="445" y="172" text-anchor="middle" class="subtitle">Pass!</text>
+
+  <!-- Feedback loop -->
+  <path d="M390 90 L390 70 L170 70 L170 85" class="feedback"/>
+  <polygon points="170,90 165,80 175,80" fill="#666666"/>
+
+  <!-- Iteration counter -->
+  <text x="280" y="175" text-anchor="middle" class="subtitle">품질 충족까지 반복</text>
+
+  <!-- Figure caption -->
+  <text x="250" y="240" text-anchor="middle" class="figure">Figure X. Evaluator-Optimizer: 생성과 평가의 반복</text>
+</svg>

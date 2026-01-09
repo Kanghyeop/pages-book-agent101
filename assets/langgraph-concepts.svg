@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 240">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+    .desc { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 16px; font-weight: 600; fill: #333333; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- State -->
+  <rect x="20" y="45" width="110" height="75" rx="8" class="box"/>
+  <text x="75" y="70" text-anchor="middle" class="title">State</text>
+  <text x="75" y="88" text-anchor="middle" class="subtitle">정보 꾸러미</text>
+  <text x="75" y="105" text-anchor="middle" class="desc">"지금 어디까지 왔나"</text>
+
+  <!-- Node -->
+  <rect x="145" y="45" width="110" height="75" rx="8" class="box"/>
+  <text x="200" y="70" text-anchor="middle" class="title">Node</text>
+  <text x="200" y="88" text-anchor="middle" class="subtitle">작업대</text>
+  <text x="200" y="105" text-anchor="middle" class="desc">"여기서 뭘 하나"</text>
+
+  <!-- Edge -->
+  <rect x="270" y="45" width="110" height="75" rx="8" class="box"/>
+  <text x="325" y="70" text-anchor="middle" class="title">Edge</text>
+  <text x="325" y="88" text-anchor="middle" class="subtitle">화살표</text>
+  <text x="325" y="105" text-anchor="middle" class="desc">"다음엔 어디로"</text>
+
+  <!-- Graph -->
+  <rect x="395" y="45" width="85" height="75" rx="8" class="box"/>
+  <text x="437" y="70" text-anchor="middle" class="title">Graph</text>
+  <text x="437" y="88" text-anchor="middle" class="subtitle">전체 흐름</text>
+  <text x="437" y="105" text-anchor="middle" class="desc">"공장 라인"</text>
+
+  <!-- Connection diagram below -->
+  <rect x="50" y="145" width="400" height="60" rx="10" fill="#FAFAFA" stroke="#DDDDDD" stroke-width="1"/>
+
+  <!-- Mini nodes -->
+  <circle cx="100" cy="175" r="15" fill="#E3F2FD" stroke="#DDDDDD" stroke-width="1.5"/>
+  <text x="100" y="179" text-anchor="middle" class="desc">N1</text>
+
+  <circle cx="200" cy="175" r="15" fill="#E3F2FD" stroke="#DDDDDD" stroke-width="1.5"/>
+  <text x="200" y="179" text-anchor="middle" class="desc">N2</text>
+
+  <circle cx="300" cy="175" r="15" fill="#E3F2FD" stroke="#DDDDDD" stroke-width="1.5"/>
+  <text x="300" y="179" text-anchor="middle" class="desc">N3</text>
+
+  <circle cx="400" cy="175" r="15" fill="#E3F2FD" stroke="#DDDDDD" stroke-width="1.5"/>
+  <text x="400" y="179" text-anchor="middle" class="desc">N4</text>
+
+  <!-- Edges -->
+  <line x1="115" y1="175" x2="180" y2="175" stroke="#333333" stroke-width="1.5"/>
+  <polygon points="185,175 175,170 175,180" fill="#333333"/>
+
+  <line x1="215" y1="175" x2="280" y2="175" stroke="#333333" stroke-width="1.5"/>
+  <polygon points="285,175 275,170 275,180" fill="#333333"/>
+
+  <line x1="315" y1="175" x2="380" y2="175" stroke="#333333" stroke-width="1.5"/>
+  <polygon points="385,175 375,170 375,180" fill="#333333"/>
+
+  <!-- Figure caption -->
+  <text x="250" y="230" text-anchor="middle" class="figure">Figure X. LangGraph 핵심 개념</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .input-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .output-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .section { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #333333; }
+    .arrow { fill: none; stroke: #333333; stroke-width: 1.5; }
+    .limit { fill: none; stroke: #666666; stroke-width: 1.5; stroke-dasharray: 4; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Section 1: Can do -->
+  <text x="20" y="25" class="section">가능</text>
+  <rect x="20" y="35" width="60" height="30" rx="5" class="input-box"/>
+  <text x="50" y="55" text-anchor="middle" class="title">입력</text>
+
+  <line x1="80" y1="50" x2="100" y2="50" class="arrow"/>
+  <polygon points="105,50 95,45 95,55" fill="#333333"/>
+
+  <rect x="105" y="35" width="60" height="30" rx="5" class="box"/>
+  <text x="135" y="55" text-anchor="middle" class="title">요약</text>
+
+  <line x1="165" y1="50" x2="185" y2="50" class="arrow"/>
+  <polygon points="190,50 180,45 180,55" fill="#333333"/>
+
+  <rect x="190" y="35" width="60" height="30" rx="5" class="box"/>
+  <text x="220" y="55" text-anchor="middle" class="title">번역</text>
+
+  <line x1="250" y1="50" x2="270" y2="50" class="arrow"/>
+  <polygon points="275,50 265,45 265,55" fill="#333333"/>
+
+  <rect x="275" y="35" width="60" height="30" rx="5" class="output-box"/>
+  <text x="305" y="55" text-anchor="middle" class="title">출력</text>
+
+  <!-- Divider -->
+  <line x1="20" y1="85" x2="480" y2="85" stroke="#DDDDDD" stroke-width="1"/>
+
+  <!-- Section 2: Cannot do -->
+  <text x="20" y="110" class="section">한계</text>
+  <rect x="20" y="120" width="60" height="30" rx="5" class="input-box"/>
+  <text x="50" y="140" text-anchor="middle" class="title">검토</text>
+
+  <!-- OK path -->
+  <line x1="80" y1="130" x2="100" y2="130" class="arrow"/>
+  <polygon points="105,130 95,125 95,135" fill="#333333"/>
+  <text x="90" y="122" text-anchor="middle" class="subtitle">OK</text>
+
+  <rect x="105" y="120" width="60" height="30" rx="5" class="output-box"/>
+  <text x="135" y="140" text-anchor="middle" class="title">출력</text>
+
+  <!-- NG path with loop -->
+  <line x1="50" y1="150" x2="50" y2="170" class="limit"/>
+  <text x="65" y="165" class="subtitle">NG</text>
+
+  <line x1="50" y1="170" x2="200" y2="170" class="limit"/>
+  <polygon points="205,170 195,165 195,175" fill="#666666"/>
+
+  <rect x="205" y="155" width="60" height="30" rx="5" class="box"/>
+  <text x="235" y="175" text-anchor="middle" class="title">수정</text>
+
+  <!-- Loop back arrow (dashed) -->
+  <path d="M 265 170 Q 290 170 290 130 Q 290 100 150 100 Q 20 100 20 135" class="limit"/>
+  <polygon points="20,135 15,125 25,125" fill="#666666"/>
+
+  <!-- X mark -->
+  <text x="380" y="145" class="subtitle">반복/분기 어려움</text>
+
+  <!-- Figure caption -->
+  <text x="250" y="210" text-anchor="middle" class="figure">Figure X. LangChain 한계</text>
+</svg>

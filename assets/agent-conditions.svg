@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .num { font-family: Pretendard, -apple-system, sans-serif; font-size: 18px; font-weight: 600; fill: #666666; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 12px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; font-weight: 500; fill: #666666; }
+    .desc { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- 1. 자율성 -->
+  <rect x="20" y="30" width="105" height="140" rx="8" class="box"/>
+  <text x="72" y="60" text-anchor="middle" class="num">1</text>
+  <text x="72" y="80" text-anchor="middle" class="title">자율성</text>
+  <text x="72" y="95" text-anchor="middle" class="subtitle">Autonomy</text>
+  <text x="72" y="120" text-anchor="middle" class="desc">매 단계마다</text>
+  <text x="72" y="133" text-anchor="middle" class="desc">인간 개입 없이</text>
+  <text x="72" y="146" text-anchor="middle" class="desc">스스로 동작</text>
+
+  <!-- 2. 사회적 능력 -->
+  <rect x="140" y="30" width="105" height="140" rx="8" class="box"/>
+  <text x="192" y="60" text-anchor="middle" class="num">2</text>
+  <text x="192" y="80" text-anchor="middle" class="title">사회적 능력</text>
+  <text x="192" y="95" text-anchor="middle" class="subtitle">Social Ability</text>
+  <text x="192" y="120" text-anchor="middle" class="desc">다른 에이전트</text>
+  <text x="192" y="133" text-anchor="middle" class="desc">(인간/기계)와</text>
+  <text x="192" y="146" text-anchor="middle" class="desc">상호작용</text>
+
+  <!-- 3. 반응성 -->
+  <rect x="260" y="30" width="105" height="140" rx="8" class="box"/>
+  <text x="312" y="60" text-anchor="middle" class="num">3</text>
+  <text x="312" y="80" text-anchor="middle" class="title">반응성</text>
+  <text x="312" y="95" text-anchor="middle" class="subtitle">Reactivity</text>
+  <text x="312" y="120" text-anchor="middle" class="desc">환경 변화를</text>
+  <text x="312" y="133" text-anchor="middle" class="desc">인지하고</text>
+  <text x="312" y="146" text-anchor="middle" class="desc">적절히 대응</text>
+
+  <!-- 4. 능동성 -->
+  <rect x="380" y="30" width="105" height="140" rx="8" class="box"/>
+  <text x="432" y="60" text-anchor="middle" class="num">4</text>
+  <text x="432" y="80" text-anchor="middle" class="title">능동성</text>
+  <text x="432" y="95" text-anchor="middle" class="subtitle">Proactivity</text>
+  <text x="432" y="120" text-anchor="middle" class="desc">목표를 향해</text>
+  <text x="432" y="133" text-anchor="middle" class="desc">주도적으로</text>
+  <text x="432" y="146" text-anchor="middle" class="desc">행동</text>
+
+  <!-- Figure caption -->
+  <text x="250" y="200" text-anchor="middle" class="figure">Figure X. 에이전트의 4가지 조건</text>
+</svg>

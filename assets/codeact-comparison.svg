@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 230">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .input-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .container-left { fill: #FAFAFA; stroke: #DDDDDD; stroke-width: 1.5; }
+    .container-right { fill: #FAFAFA; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 9px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .section { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #333333; }
+    .code { font-family: Consolas, monospace; font-size: 8px; fill: #333333; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Left: Normal Agent -->
+  <rect x="20" y="40" width="250" height="140" rx="8" class="container-left"/>
+  <text x="145" y="58" text-anchor="middle" class="section">일반 에이전트</text>
+
+  <rect x="35" y="70" width="220" height="28" rx="4" class="input-box"/>
+  <text x="145" y="88" text-anchor="middle" class="subtitle">"search(query)" → JSON 파싱 → 결과</text>
+
+  <rect x="35" y="108" width="220" height="28" rx="4" class="input-box"/>
+  <text x="145" y="126" text-anchor="middle" class="subtitle">"calculate(data)" → JSON 파싱 → 결과</text>
+
+  <text x="145" y="165" text-anchor="middle" class="subtitle">도구마다 개별 호출, 복잡한 조합 어려움</text>
+
+  <!-- Right: CodeAct Agent -->
+  <rect x="290" y="40" width="250" height="140" rx="8" class="container-right"/>
+  <text x="415" y="58" text-anchor="middle" class="section">CodeAct 에이전트</text>
+
+  <rect x="305" y="68" width="220" height="90" rx="4" class="box"/>
+  <text x="415" y="84" text-anchor="middle" class="code">results = search(query)</text>
+  <text x="415" y="98" text-anchor="middle" class="code">filtered = [r for r in results</text>
+  <text x="415" y="112" text-anchor="middle" class="code">            if r.score > 0.8]</text>
+  <text x="415" y="126" text-anchor="middle" class="code">final = calculate(filtered)</text>
+  <text x="415" y="140" text-anchor="middle" class="code">print(final)</text>
+
+  <text x="415" y="168" text-anchor="middle" class="subtitle">Python으로 복잡한 로직도 한 번에</text>
+
+  <!-- Comparison metrics -->
+  <text x="145" y="195" text-anchor="middle" class="subtitle">정확도: ~70%</text>
+  <text x="415" y="195" text-anchor="middle" class="subtitle">정확도: ~90%</text>
+
+  <!-- Figure caption -->
+  <text x="280" y="220" text-anchor="middle" class="figure">Figure X. CodeAct: 코드로 행동하기</text>
+</svg>

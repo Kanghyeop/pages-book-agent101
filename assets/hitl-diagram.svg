@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150">
+  <style>
+    .loop { fill: none; stroke: #333333; stroke-width: 2; }
+    .label { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; text-anchor: middle; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; text-anchor: middle; }
+  </style>
+
+  <!-- Circular loop (black) -->
+  <ellipse cx="100" cy="60" rx="60" ry="35" class="loop"/>
+
+  <!-- AI and Human inside loop -->
+  <text x="70" y="65" class="label">AI</text>
+  <text x="130" y="65" class="label">인간</text>
+
+  <!-- Figure caption -->
+  <text x="100" y="130" class="figure">Figure X-5. HITL: 인간이 루프 안에</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 180">
+  <style>
+    .box { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 1.5; }
+    .output-box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; font-weight: 600; fill: #333333; }
+    .subtitle { font-family: Pretendard, -apple-system, sans-serif; font-size: 8px; fill: #666666; }
+    .header { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .arrow { stroke: #333333; stroke-width: 1.5; fill: none; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- Step 1 -->
+  <rect x="20" y="50" width="85" height="50" rx="6" class="box"/>
+  <text x="62" y="72" text-anchor="middle" class="title">1. 주제 선정</text>
+  <text x="62" y="88" text-anchor="middle" class="subtitle">output: 주제</text>
+
+  <!-- Arrow -->
+  <line x1="105" y1="75" x2="125" y2="75" class="arrow"/>
+  <polygon points="130,75 120,70 120,80" fill="#333333"/>
+
+  <!-- Step 2 -->
+  <rect x="130" y="50" width="85" height="50" rx="6" class="box"/>
+  <text x="172" y="72" text-anchor="middle" class="title">2. 개요 작성</text>
+  <text x="172" y="88" text-anchor="middle" class="subtitle">input: 주제</text>
+
+  <!-- Arrow -->
+  <line x1="215" y1="75" x2="235" y2="75" class="arrow"/>
+  <polygon points="240,75 230,70 230,80" fill="#333333"/>
+
+  <!-- Step 3 -->
+  <rect x="240" y="50" width="85" height="50" rx="6" class="box"/>
+  <text x="282" y="72" text-anchor="middle" class="title">3. 초안 작성</text>
+  <text x="282" y="88" text-anchor="middle" class="subtitle">input: 개요</text>
+
+  <!-- Arrow -->
+  <line x1="325" y1="75" x2="345" y2="75" class="arrow"/>
+  <polygon points="350,75 340,70 340,80" fill="#333333"/>
+
+  <!-- Step 4 -->
+  <rect x="350" y="50" width="85" height="50" rx="6" class="box"/>
+  <text x="392" y="72" text-anchor="middle" class="title">4. 퇴고</text>
+  <text x="392" y="88" text-anchor="middle" class="subtitle">input: 초안</text>
+
+  <!-- Arrow -->
+  <line x1="435" y1="75" x2="455" y2="75" class="arrow"/>
+  <polygon points="460,75 450,70 450,80" fill="#333333"/>
+
+  <!-- Step 5 (output) -->
+  <rect x="460" y="50" width="70" height="50" rx="6" class="output-box"/>
+  <text x="495" y="72" text-anchor="middle" class="title">5. 완성</text>
+  <text x="495" y="88" text-anchor="middle" class="subtitle">최종 결과</text>
+
+  <!-- Connection flow label -->
+  <text x="275" y="125" text-anchor="middle" class="subtitle">각 단계의 출력이 다음 단계의 입력으로 연결</text>
+
+  <!-- Data flow indicators -->
+  <path d="M62 100 L62 115 L495 115 L495 105" stroke="#666666" stroke-width="1" stroke-dasharray="4,2" fill="none"/>
+
+  <!-- Figure caption -->
+  <text x="275" y="168" text-anchor="middle" class="figure">Figure X. Prompt Chaining: 단계별 연결</text>
+</svg>

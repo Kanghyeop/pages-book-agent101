@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300">
+  <style>
+    .outer { fill: #FAFAFA; stroke: #DDDDDD; stroke-width: 2; stroke-dasharray: 5,3; }
+    .module { fill: #FFFFFF; stroke: #DDDDDD; stroke-width: 1.5; }
+    .core { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 2; }
+    .rules { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .text { font-family: Pretendard, -apple-system, sans-serif; font-size: 13px; font-weight: 500; fill: #333333; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; fill: #666666; }
+    .label { font-family: Pretendard, -apple-system, sans-serif; font-size: 12px; font-weight: 600; fill: #333333; }
+    .arrow { stroke: #333333; stroke-width: 1.5; fill: none; }
+    .io { font-family: Pretendard, -apple-system, sans-serif; font-size: 12px; fill: #333333; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- 시스템 외곽 -->
+  <rect x="120" y="20" width="460" height="220" rx="10" class="outer"/>
+  <text x="140" y="45" class="label">시스템 내부</text>
+
+  <!-- 입력 -->
+  <text x="30" y="100" class="io">Excel</text>
+  <text x="30" y="118" class="io">파일</text>
+  <line x1="70" y1="105" x2="115" y2="105" class="arrow"/>
+  <polygon points="120,105 110,100 110,110" fill="#333333"/>
+
+  <!-- Loader -->
+  <rect x="140" y="70" width="100" height="70" rx="6" class="module"/>
+  <text x="190" y="100" text-anchor="middle" class="text" font-weight="bold">Loader</text>
+  <text x="190" y="118" text-anchor="middle" class="title">Excel → 행렬</text>
+
+  <line x1="240" y1="105" x2="290" y2="105" class="arrow"/>
+  <polygon points="295,105 285,100 285,110" fill="#333333"/>
+
+  <!-- 최적화 엔진 -->
+  <rect x="300" y="60" width="120" height="90" rx="6" class="core"/>
+  <text x="360" y="95" text-anchor="middle" class="text" font-weight="bold">최적화 엔진</text>
+  <text x="360" y="115" text-anchor="middle" class="title">Hard 만족</text>
+  <text x="360" y="132" text-anchor="middle" class="title">Soft 최대화</text>
+
+  <line x1="420" y1="105" x2="470" y2="105" class="arrow"/>
+  <polygon points="475,105 465,100 465,110" fill="#333333"/>
+
+  <!-- Writer -->
+  <rect x="480" y="70" width="100" height="70" rx="6" class="module"/>
+  <text x="530" y="100" text-anchor="middle" class="text" font-weight="bold">Writer</text>
+  <text x="530" y="118" text-anchor="middle" class="title">행렬 → Excel</text>
+
+  <!-- 출력 -->
+  <line x1="580" y1="105" x2="630" y2="105" class="arrow"/>
+  <polygon points="635,105 625,100 625,110" fill="#333333"/>
+  <text x="650" y="100" class="io">Excel</text>
+  <text x="650" y="118" class="io">파일</text>
+
+  <!-- 규칙 박스 -->
+  <rect x="180" y="165" width="340" height="60" rx="6" class="rules"/>
+  <text x="350" y="188" text-anchor="middle" class="text" font-weight="bold">규칙 정의 (코드로 고정)</text>
+  <text x="350" y="206" text-anchor="middle" class="title">반드시: 인원 배치, 연속 근무 제한... | 가능하면: 공평 배분, 휴무 분산...</text>
+
+  <!-- Figure caption -->
+  <text x="350" y="280" text-anchor="middle" class="figure">Figure 41-2. 시스템 내부 구조</text>
+</svg>

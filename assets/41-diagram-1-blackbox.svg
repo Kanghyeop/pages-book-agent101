@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220">
+  <style>
+    .box { fill: #F5F5F5; stroke: #DDDDDD; stroke-width: 1.5; }
+    .system { fill: #E3F2FD; stroke: #DDDDDD; stroke-width: 2; }
+    .text { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 500; fill: #333333; }
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 12px; fill: #666666; }
+    .arrow { stroke: #333333; stroke-width: 1.5; fill: none; }
+    .note { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; fill: #666666; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; }
+  </style>
+
+  <!-- 입력 1 -->
+  <rect x="30" y="40" width="120" height="50" rx="6" class="box"/>
+  <text x="90" y="70" text-anchor="middle" class="text">지난달 번표</text>
+
+  <!-- 입력 2 -->
+  <rect x="30" y="110" width="120" height="50" rx="6" class="box"/>
+  <text x="90" y="140" text-anchor="middle" class="text">요청사항</text>
+
+  <!-- 화살표 -->
+  <line x1="150" y1="65" x2="210" y2="100" class="arrow"/>
+  <polygon points="215,100 205,95 205,105" fill="#333333"/>
+  <line x1="150" y1="135" x2="210" y2="100" class="arrow"/>
+
+  <!-- 시스템 -->
+  <rect x="220" y="60" width="140" height="80" rx="8" class="system"/>
+  <text x="290" y="95" text-anchor="middle" class="text" font-weight="bold">시스템</text>
+  <text x="290" y="115" text-anchor="middle" class="title">(규칙 내장)</text>
+
+  <!-- 화살표 -->
+  <line x1="360" y1="100" x2="440" y2="100" class="arrow"/>
+  <polygon points="445,100 435,95 435,105" fill="#333333"/>
+
+  <!-- 출력 -->
+  <rect x="450" y="75" width="120" height="50" rx="6" class="box"/>
+  <text x="510" y="105" text-anchor="middle" class="text">다음달 번표</text>
+
+  <!-- 노트 -->
+  <text x="300" y="180" text-anchor="middle" class="note">* 규칙은 시스템 내부에 고정 (변수 아님)</text>
+
+  <!-- Figure caption -->
+  <text x="300" y="210" text-anchor="middle" class="figure">Figure 41-1. 블랙박스로 보는 시스템</text>
+</svg>
