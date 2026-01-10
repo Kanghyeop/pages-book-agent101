@@ -1,0 +1,120 @@
+<!-- 이전/다음 네비게이션 (footer에서 실행 - DOM 완전 로드 후) -->
+<script>
+(function() {
+  'use strict';
+
+  // 페이지 로드 완료 후 실행
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  function init() {
+    // 약간의 지연 후 실행 (Just the Docs 동적 로딩 대기)
+    setTimeout(createPrevNextNav, 100);
+  }
+
+  function createPrevNextNav() {
+    // 이미 생성되었으면 스킵
+    if (document.querySelector('.nav-footer')) {
+      return;
+    }
+
+    // 인덱스 페이지(슬래시로 끝남)에서는 네비게이션 생성하지 않음
+    if (window.location.pathname.endsWith('/')) {
+      return;
+    }
+
+    // 사이드바에서 모든 링크 수집
+    var allLinks = document.querySelectorAll('.site-nav a[href]');
+    if (allLinks.length === 0) {
+      return;
+    }
+
+    // .html로 끝나는 콘텐츠 페이지만 필터링
+    var navLinks = [];
+    allLinks.forEach(function(link) {
+      var href = link.getAttribute('href');
+      var text = link.textContent.trim();
+
+      if (href &&
+          text &&
+          href.indexOf('#') !== 0 &&
+          href.indexOf('http') !== 0 &&
+          href.endsWith('.html')) {
+        navLinks.push({ href: href, title: text });
+      }
+    });
+
+    if (navLinks.length < 2) {
+      return;
+    }
+
+    // 중복 제거 (같은 href가 여러 번 나올 수 있음)
+    var seen = {};
+    navLinks = navLinks.filter(function(item) {
+      if (seen[item.href]) return false;
+      seen[item.href] = true;
+      return true;
+    });
+
+    // 현재 페이지 찾기
+    var currentPath = window.location.pathname;
+    var currentIndex = -1;
+
+    for (var i = 0; i < navLinks.length; i++) {
+      var a = document.createElement('a');
+      a.href = navLinks[i].href;
+      if (a.pathname === currentPath) {
+        currentIndex = i;
+        break;
+      }
+    }
+
+    if (currentIndex === -1) {
+      return;
+    }
+
+    // 네비게이션 생성
+    var nav = document.createElement('nav');
+    nav.className = 'nav-footer';
+
+    // 이전 버튼
+    if (currentIndex > 0) {
+      var prev = navLinks[currentIndex - 1];
+      var prevLink = document.createElement('a');
+      prevLink.href = prev.href;
+      prevLink.className = 'prev';
+      prevLink.textContent = prev.title;
+      nav.appendChild(prevLink);
+    } else {
+      nav.appendChild(document.createElement('span'));
+    }
+
+    // 스페이서
+    var spacer = document.createElement('span');
+    spacer.className = 'spacer';
+    nav.appendChild(spacer);
+
+    // 다음 버튼
+    if (currentIndex < navLinks.length - 1) {
+      var next = navLinks[currentIndex + 1];
+      var nextLink = document.createElement('a');
+      nextLink.href = next.href;
+      nextLink.className = 'next';
+      nextLink.textContent = next.title;
+      nav.appendChild(nextLink);
+    }
+
+    // 메인 컨텐츠에 추가
+    var mainContent = document.getElementById('main-content') ||
+                      document.querySelector('.main-content') ||
+                      document.querySelector('main');
+
+    if (mainContent) {
+      mainContent.appendChild(nav);
+    }
+  }
+})();
+</script>
