@@ -54,9 +54,9 @@ nav_order: 0
 - [53. [v1] 개인이 오늘 저녁에 할 일](05-action/53-personal.html)
 - [54. 조직이 이번 주에 할 일](05-action/54-team.html)
 
-### 부록 A
+### 부록 A: 실무 가이드
 - [A01. Claude Code 사용법](appendix-a/A01.html)
-- [A02. 골든래빗을 위한 에이전트 혁명 액션플랜](appendix-a/A02.html)
+- [A02. 골든래빗 액션플랜](appendix-a/A02.html)
 
 ### 부록 C: 시맨틱 맵
 - [C01. 전체 요약](appendix-c/C01.html)
