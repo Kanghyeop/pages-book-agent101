@@ -141,6 +141,13 @@
     linkElements.forEach(function(link) {
       var href = link.getAttribute('href');
       var text = link.textContent.trim();
+      var isActive = link.classList.contains('active');
+
+      // 현재 페이지(active)는 href가 없으므로 현재 URL 사용
+      if (isActive && !href) {
+        href = window.location.pathname;
+      }
+
       // 빈 링크, 앵커, 외부 링크, 인덱스 페이지(슬래시로 끝남) 제외
       if (href && text &&
           href.indexOf('#') !== 0 &&
