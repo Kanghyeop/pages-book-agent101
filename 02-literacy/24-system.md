@@ -5,7 +5,6 @@ parent: Part 2
 ---
 
 
-
 ## 왜 ChatGPT는 쉬운데 Claude Code는 어려운가?
 
 ChatGPT나 Midjourney 같은 AI 서비스를 사용하는 건 직관적입니다. 질문을 입력하면 답이 나오고, 프롬프트를 주면 이미지가 나옵니다. 사용자와 AI 사이의 단순한 주고받기. 구조가 명확합니다.

@@ -4,7 +4,6 @@ nav_order: 1
 parent: Prologue
 ---
 
-
 이 책은 마법을 약속하지 않습니다.
 
 ---
