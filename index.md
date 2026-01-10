@@ -13,8 +13,8 @@ nav_order: 0
 ## 목차
 
 ### Prologue
-- [01. [v1] 서문: 이 책이 쓰여진 이유](00-prologue/01-prologue.html)
-- [02. [v1] 압축본: 3분 미리보기](00-prologue/02-preview.html)
+- [01. [v1] 압축본: 3분 미리보기](00-prologue/01-preview.html)
+- [02. [v1] 서문: 이 책이 쓰여진 이유](00-prologue/02-prologue.html)
 
 ### Part 1. Why: 필요한 이유
 - [11. [v1] 비용 구조가 바뀌면 조직이 바뀐다](01-why/11-evernote.html)
