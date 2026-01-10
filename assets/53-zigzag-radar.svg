@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <style>
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .label { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #333333; }
+    .legend { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; fill: #666666; }
+    .axis-label { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; fill: #666666; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; font-style: italic; }
+  </style>
+
+  <!-- 배경 -->
+  <rect width="500" height="400" fill="#FAFAFA"/>
+
+  <!-- 제목 -->
+  <text x="250" y="30" text-anchor="middle" class="title">모델별 능력 비교: 지그재그 패턴</text>
+
+  <!-- 레이더 차트 중심 -->
+  <g transform="translate(250, 200)">
+    <!-- 배경 원 (레벨) -->
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#E0E0E0" stroke-width="1"/>
+    <circle cx="0" cy="0" r="90" fill="none" stroke="#E0E0E0" stroke-width="1"/>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#E0E0E0" stroke-width="1"/>
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#E0E0E0" stroke-width="1"/>
+
+    <!-- 축 선 (4개 능력) -->
+    <line x1="0" y1="-120" x2="0" y2="0" stroke="#CCCCCC" stroke-width="1"/>
+    <line x1="120" y1="0" x2="0" y2="0" stroke="#CCCCCC" stroke-width="1"/>
+    <line x1="0" y1="120" x2="0" y2="0" stroke="#CCCCCC" stroke-width="1"/>
+    <line x1="-120" y1="0" x2="0" y2="0" stroke="#CCCCCC" stroke-width="1"/>
+
+    <!-- 축 레이블 -->
+    <text x="0" y="-135" text-anchor="middle" class="label">코드 생성</text>
+    <text x="140" y="5" text-anchor="start" class="label">속도</text>
+    <text x="0" y="150" text-anchor="middle" class="label">창작/글쓰기</text>
+    <text x="-140" y="5" text-anchor="end" class="label">복잡한 추론</text>
+
+    <!-- Claude (파란색) - 코드 높음, 속도 중간, 창작 낮음, 추론 높음 -->
+    <polygon points="0,-105 75,0 0,60 -100,0"
+             fill="rgba(59, 130, 246, 0.2)"
+             stroke="#3B82F6"
+             stroke-width="2"/>
+
+    <!-- GPT (초록색) - 코드 중간, 속도 높음, 창작 높음, 추론 중간 -->
+    <polygon points="0,-75 105,0 0,100 -70,0"
+             fill="rgba(34, 197, 94, 0.2)"
+             stroke="#22C55E"
+             stroke-width="2"/>
+
+    <!-- Gemini (보라색) - 코드 중간, 속도 중간, 창작 중간, 추론 중간 (균형) -->
+    <polygon points="0,-70 80,0 0,75 -75,0"
+             fill="rgba(168, 85, 247, 0.2)"
+             stroke="#A855F7"
+             stroke-width="2"/>
+  </g>
+
+  <!-- 범례 -->
+  <g transform="translate(380, 320)">
+    <rect x="0" y="0" width="12" height="12" fill="#3B82F6" rx="2"/>
+    <text x="18" y="10" class="legend">Claude (Sonnet 4)</text>
+
+    <rect x="0" y="20" width="12" height="12" fill="#22C55E" rx="2"/>
+    <text x="18" y="30" class="legend">GPT-4o</text>
+
+    <rect x="0" y="40" width="12" height="12" fill="#A855F7" rx="2"/>
+    <text x="18" y="50" class="legend">Gemini 2.0</text>
+  </g>
+
+  <!-- 설명 박스 -->
+  <g transform="translate(20, 320)">
+    <rect x="0" y="0" width="200" height="60" fill="#FFF3CD" rx="6" stroke="#DDDDDD"/>
+    <text x="10" y="18" class="axis-label">핵심 인사이트:</text>
+    <text x="10" y="33" class="axis-label">각 모델마다 강점/약점이 다름</text>
+    <text x="10" y="48" class="axis-label">→ 작업에 맞는 모델 선택이 중요</text>
+  </g>
+
+  <!-- Figure 캡션 -->
+  <text x="250" y="390" text-anchor="middle" class="figure">Figure 53-1. 지그재그 지능: 모델별 능력 비교</text>
+</svg>

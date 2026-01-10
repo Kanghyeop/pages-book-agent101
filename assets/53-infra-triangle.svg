@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 350">
+  <style>
+    .title { font-family: Pretendard, -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #333333; }
+    .label { font-family: Pretendard, -apple-system, sans-serif; font-size: 12px; font-weight: 600; fill: #333333; }
+    .desc { font-family: Pretendard, -apple-system, sans-serif; font-size: 10px; fill: #666666; }
+    .figure { font-family: Pretendard, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #666666; font-style: italic; }
+  </style>
+
+  <!-- 배경 -->
+  <rect width="450" height="350" fill="#FAFAFA"/>
+
+  <!-- 제목 -->
+  <text x="225" y="30" text-anchor="middle" class="title">개인 R&D를 위한 3가지 인프라</text>
+
+  <!-- 삼각형 -->
+  <polygon points="225,70 380,280 70,280"
+           fill="#E3F2FD"
+           stroke="#3B82F6"
+           stroke-width="2"/>
+
+  <!-- 중심 원 (R&D) -->
+  <circle cx="225" cy="200" r="40" fill="#D4EDDA" stroke="#22C55E" stroke-width="2"/>
+  <text x="225" y="195" text-anchor="middle" class="label">개인</text>
+  <text x="225" y="210" text-anchor="middle" class="label">R&D</text>
+
+  <!-- 꼭짓점 1: 여유 시간 (상단) -->
+  <circle cx="225" cy="70" r="30" fill="#FFF3CD" stroke="#F59E0B" stroke-width="2"/>
+  <text x="225" y="65" text-anchor="middle" class="label">여유</text>
+  <text x="225" y="80" text-anchor="middle" class="label">시간</text>
+  <text x="225" y="115" text-anchor="middle" class="desc">비효율적으로 헤매는</text>
+  <text x="225" y="128" text-anchor="middle" class="desc">시간을 허용</text>
+
+  <!-- 꼭짓점 2: 최소 생존 고정비 (좌하단) -->
+  <circle cx="70" cy="280" r="30" fill="#FFF3CD" stroke="#F59E0B" stroke-width="2"/>
+  <text x="70" y="275" text-anchor="middle" class="label">생존</text>
+  <text x="70" y="290" text-anchor="middle" class="label">고정비</text>
+  <text x="70" y="235" text-anchor="middle" class="desc">OPEX 안정이</text>
+  <text x="70" y="248" text-anchor="middle" class="desc">CAPEX 투자 가능케 함</text>
+
+  <!-- 꼭짓점 3: 직접 써보는 시간 (우하단) -->
+  <circle cx="380" cy="280" r="30" fill="#FFF3CD" stroke="#F59E0B" stroke-width="2"/>
+  <text x="380" y="275" text-anchor="middle" class="label">실험</text>
+  <text x="380" y="290" text-anchor="middle" class="label">시간</text>
+  <text x="380" y="235" text-anchor="middle" class="desc">직접 써봐야</text>
+  <text x="380" y="248" text-anchor="middle" class="desc">차이를 알 수 있음</text>
+
+  <!-- 연결선 (점선) -->
+  <line x1="225" y1="100" x2="225" y2="160" stroke="#666666" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="95" y1="260" x2="185" y2="210" stroke="#666666" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="355" y1="260" x2="265" y2="210" stroke="#666666" stroke-width="1" stroke-dasharray="4,2"/>
+
+  <!-- Figure 캡션 -->
+  <text x="225" y="340" text-anchor="middle" class="figure">Figure 53-2. 인프라가 먼저다: R&D를 위한 3가지 조건</text>
+</svg>
