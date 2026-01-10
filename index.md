@@ -27,7 +27,7 @@ nav_order: 0
 - [범용 어시스턴트](02-literacy/21-assistant.html)
 - [파운데이션 모델과 Task](02-literacy/22-foundation.html)
 - [AI 프로덕트 분석](02-literacy/23-product.html)
-- [에이전트 시스템의 구조 이해하기](02-literacy/24-system.html)
+- [[v1] 에이전트 시스템의 구조 이해하기](02-literacy/24-system.html)
 - [에이전틱 모델과 개발자 도구](02-literacy/25-agentic.html)
 - [노코드 자동화 도구](02-literacy/26-nocode.html)
 - [모델 허브와 인프라](02-literacy/27-hub.html)
@@ -36,7 +36,8 @@ nav_order: 0
 - [[v1] 에이전트의 정의](03-agent/31-definition.html)
 - [시스템으로 바라보기](03-agent/32-system.html)
 - [에이전트의 다섯 가지 컴포넌트](03-agent/33-component.html)
-- [5블록 모델과 Execution의 가치](03-agent/34-execution.html)
+- [[v1] AI 에이전트 스타트업: 안전 vs 경험](03-agent/34-startup.html)
+- [5블록 모델: 조직을 보는 렌즈](03-agent/35-5block.html)
 
 ### Part 4. 테크니컬 딥다이브
 - [[v1] 시스템으로 바꾸는 첫 경험](04-technical/41-first.html)
@@ -44,7 +45,7 @@ nav_order: 0
 - [[v1] LangChain과 LangGraph 이해하기](04-technical/43-langchain.html)
 - [[v1] 지식 계층과 구조화](04-technical/44-knowledge.html)
 - [툴과 커넥터](04-technical/45-tool.html)
-- [멀티에이전트 구성 패턴](04-technical/46-multi.html)
+- [[v1] 멀티에이전트 구성 패턴](04-technical/46-multi.html)
 
 ### Part 5. 개인과 조직에 적용하기
 - [토큰경제](05-action/51-token.html)
@@ -62,8 +63,7 @@ nav_order: 0
 - [다루지 못한 것](appendix-a/A07.html)
 
 ### 부록 B: 김종우 기고
-- [AI 에이전트 스타트업: 안전 vs 경험](appendix-b/B01.html)
-- [Claude Code 꿀팁](appendix-b/B02.html)
+- [Claude Code 꿀팁](appendix-b/B01.html)
 
 ### 부록 C: 시맨틱 맵
 - [전체 요약](appendix-c/C01.html)

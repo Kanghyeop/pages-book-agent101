@@ -1,7 +1,3 @@
----
-nav_exclude: true
----
-
 # 시각 자료 갤러리 (Part 2)
 
 Mermaid 다이어그램 Part 2입니다. [Part 1은 여기](GALLERY.md)

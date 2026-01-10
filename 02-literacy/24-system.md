@@ -1,9 +1,11 @@
 ---
-title: "에이전트 시스템의 구조 이해하기"
+title: "[v1] 에이전트 시스템의 구조 이해하기"
 nav_order: 4
 parent: Part 2
 ---
 
+
+> **v1 검토됨** - 이 문서는 1차 검토를 완료했습니다.
 
 ## 왜 ChatGPT는 쉬운데 Claude Code는 어려운가?
 
