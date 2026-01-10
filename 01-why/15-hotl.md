@@ -1,5 +1,5 @@
 ---
-title: "15. [v1] HITL에서 HOTL로 가는 길"
+title: "15. [v1] 전환을 위한 5단계 방법론"
 nav_order: 5
 parent: Part 1
 ---

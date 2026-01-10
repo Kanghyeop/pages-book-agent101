@@ -1,5 +1,5 @@
 ---
-title: "02. [v1] 서문: 이 책이 쓰여진 이유"
+title: "02. [v1] 이 책이 쓰여진 이유"
 nav_order: 2
 parent: Prologue
 ---

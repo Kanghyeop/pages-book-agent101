@@ -1,5 +1,5 @@
 ---
-title: "01. [v1] 압축본: 3분 미리보기"
+title: "01. [v1] 책 전체를 3분에 압축하면"
 nav_order: 1
 parent: Prologue
 ---

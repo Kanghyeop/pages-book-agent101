@@ -1,5 +1,5 @@
 ---
-title: "12. [v1] 티켓이 상태를 따라 흐른다"
+title: "12. [v1] 사람은 예외만 본다 (근조화환)"
 nav_order: 2
 parent: Part 1
 ---

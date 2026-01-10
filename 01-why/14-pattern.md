@@ -1,5 +1,5 @@
 ---
-title: "14. [v1] 같은 패턴, 다른 규모"
+title: "14. [v1] 세 가지 사례, 병목은 늘 같은 곳에서"
 nav_order: 4
 parent: Part 1
 ---

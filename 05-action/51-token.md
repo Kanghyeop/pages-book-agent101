@@ -1,5 +1,5 @@
 ---
-title: "51. 토큰경제"
+title: "51. 토큰 경제 = 에이전트의 재무회계"
 nav_order: 1
 parent: Part 5
 ---

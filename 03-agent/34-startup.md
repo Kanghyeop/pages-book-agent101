@@ -1,5 +1,5 @@
 ---
-title: "34. [v1] AI 에이전트 스타트업: 안전 vs 경험"
+title: "34. [v1] 두가지 스타트업 비교: 안전 vs 경험"
 nav_order: 4
 parent: Part 3
 ---

@@ -1,5 +1,5 @@
 ---
-title: "24. [v1] 에이전트 시스템의 구조 이해하기"
+title: "24. [v1] Claude Code를 통한 간단한 에이전트 구조 이해"
 nav_order: 4
 parent: Part 2
 ---

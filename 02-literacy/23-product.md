@@ -1,5 +1,5 @@
 ---
-title: "23. AI 프로덕트 분석"
+title: "23. 복잡해보이는 여러가지 AI 프로덕트를 해부해보기"
 nav_order: 3
 parent: Part 2
 ---

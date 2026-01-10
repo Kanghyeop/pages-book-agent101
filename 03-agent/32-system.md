@@ -1,5 +1,5 @@
 ---
-title: "32. 시스템으로 바라보기"
+title: "32. 시스템 사고의 첫걸음"
 nav_order: 2
 parent: Part 3
 ---

@@ -1,5 +1,5 @@
 ---
-title: "16. [v1] 에이전트 시대의 세 가지 역할"
+title: "16. [v1] 새로운 시대의 새로운 역할 모델"
 nav_order: 6
 parent: Part 1
 ---

@@ -1,5 +1,5 @@
 ---
-title: "52. [v1] AI로 돈버는법"
+title: "52. [v1] AI로 돈버는 방법"
 nav_order: 2
 parent: Part 5
 ---

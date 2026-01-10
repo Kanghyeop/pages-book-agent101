@@ -1,5 +1,5 @@
 ---
-title: "21. 범용 어시스턴트"
+title: "21. 질문-답변에서 목표-자율로"
 nav_order: 1
 parent: Part 2
 ---

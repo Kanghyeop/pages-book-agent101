@@ -1,5 +1,5 @@
 ---
-title: "33. 에이전트의 다섯 가지 컴포넌트"
+title: "33. 에이전트 내부 다섯 구성요소"
 nav_order: 3
 parent: Part 3
 ---

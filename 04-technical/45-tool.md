@@ -1,5 +1,5 @@
 ---
-title: "45. 툴과 커넥터"
+title: "45. 손과 발, 툴과 커넥터"
 nav_order: 5
 parent: Part 4
 ---

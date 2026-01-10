@@ -1,5 +1,5 @@
 ---
-title: "22. 파운데이션 모델과 Task"
+title: "22. 전통 딥러닝과 생성형 AI 파운데이션 모델"
 nav_order: 2
 parent: Part 2
 ---

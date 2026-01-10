@@ -1,5 +1,5 @@
 ---
-title: "42. 개념과 어휘 정립"
+title: "42. 개발자와 대화하기 위한 어휘"
 nav_order: 2
 parent: Part 4
 ---

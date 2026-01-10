@@ -13,54 +13,54 @@ nav_order: 0
 ## 목차
 
 ### Prologue
-- [01. [v1] 압축본: 3분 미리보기](00-prologue/01-preview.html)
-- [02. [v1] 서문: 이 책이 쓰여진 이유](00-prologue/02-prologue.html)
+- [01. [v1] 책 전체를 3분에 압축하면](00-prologue/01-preview.html)
+- [02. [v1] 이 책이 쓰여진 이유](00-prologue/02-prologue.html)
 
 ### Part 1. Why: 필요한 이유
-- [11. [v1] 비용 구조가 바뀌면 조직이 바뀐다](01-why/11-evernote.html)
-- [12. [v1] 티켓이 상태를 따라 흐른다](01-why/12-ticket.html)
-- [13. [v1] 인간과 AI의 역할 분담](01-why/13-hitl.html)
-- [14. [v1] 같은 패턴, 다른 규모](01-why/14-pattern.html)
-- [15. [v1] HITL에서 HOTL로 가는 길](01-why/15-hotl.html)
-- [16. [v1] 에이전트 시대의 세 가지 역할](01-why/16-mta.html)
+- [11. [v1] 성장과 고용이 분리되는 시대 (에버노트)](01-why/11-evernote.html)
+- [12. [v1] 사람은 예외만 본다 (근조화환)](01-why/12-ticket.html)
+- [13. [v1] HITL, 인간과 AI의 역할 분담](01-why/13-hitl.html)
+- [14. [v1] 세 가지 사례, 병목은 늘 같은 곳에서](01-why/14-pattern.html)
+- [15. [v1] 전환을 위한 5단계 방법론](01-why/15-hotl.html)
+- [16. [v1] 새로운 시대의 새로운 역할 모델](01-why/16-mta.html)
 
 ### Part 2. Literacy: 배경지식
-- [21. 범용 어시스턴트](02-literacy/21-assistant.html)
-- [22. 파운데이션 모델과 Task](02-literacy/22-foundation.html)
-- [23. AI 프로덕트 분석](02-literacy/23-product.html)
-- [24. [v1] 에이전트 시스템의 구조 이해하기](02-literacy/24-system.html)
+- [21. 질문-답변에서 목표-자율로](02-literacy/21-assistant.html)
+- [22. 전통 딥러닝과 생성형 AI 파운데이션 모델](02-literacy/22-foundation.html)
+- [23. 복잡해보이는 여러가지 AI 프로덕트를 해부해보기](02-literacy/23-product.html)
+- [24. [v1] Claude Code를 통한 간단한 에이전트 구조 이해](02-literacy/24-system.html)
 - [25. 에이전틱 모델과 개발자 도구](02-literacy/25-agentic.html)
-- [26. 노코드 자동화 도구](02-literacy/26-nocode.html)
-- [27. 모델 허브와 인프라](02-literacy/27-hub.html)
+- [26. 개발자 없이도 노코드 자동화](02-literacy/26-nocode.html)
+- [27. 개발자들의 모델 허브와 인프라](02-literacy/27-hub.html)
 
 ### Part 3. Agent: 에이전트 시스템의 기획과 설계
 - [31. [v1] 에이전트의 정의](03-agent/31-definition.html)
-- [32. 시스템으로 바라보기](03-agent/32-system.html)
-- [33. 에이전트의 다섯 가지 컴포넌트](03-agent/33-component.html)
-- [34. [v1] AI 에이전트 스타트업: 안전 vs 경험](03-agent/34-startup.html)
+- [32. 시스템 사고의 첫걸음](03-agent/32-system.html)
+- [33. 에이전트 내부 다섯 구성요소](03-agent/33-component.html)
+- [34. [v1] 두가지 스타트업 비교: 안전 vs 경험](03-agent/34-startup.html)
 - [35. 5블록 모델: 조직을 보는 렌즈](03-agent/35-5block.html)
 
 ### Part 4. Technical: 테크니컬 딥다이브
-- [41. [v1] 시스템으로 바꾸는 첫 경험](04-technical/41-first.html)
-- [42. 개념과 어휘 정립](04-technical/42-concept.html)
-- [43. [v1] LangChain과 LangGraph 이해하기](04-technical/43-langchain.html)
-- [44. [v1] 지식 계층과 구조화](04-technical/44-knowledge.html)
-- [45. 툴과 커넥터](04-technical/45-tool.html)
-- [46. [v1] 멀티에이전트 구성 패턴](04-technical/46-multi.html)
+- [41. [v1] 시스템으로 바꾸는 첫 경험 (간호사 번표)](04-technical/41-first.html)
+- [42. 개발자와 대화하기 위한 어휘](04-technical/42-concept.html)
+- [43. [v1] LangChain과 LangGraph? (근조화환)](04-technical/43-langchain.html)
+- [44. [v1] 기억, 메모리와 RAG](04-technical/44-knowledge.html)
+- [45. 손과 발, 툴과 커넥터](04-technical/45-tool.html)
+- [46. [v1] 멀티 에이전트 구성 패턴](04-technical/46-multi.html)
 
 ### Part 5. Action: 개인과 조직에 적용하기
-- [51. 토큰경제](05-action/51-token.html)
-- [52. [v1] AI로 돈버는법](05-action/52-money.html)
+- [51. 토큰 경제 = 에이전트의 재무회계](05-action/51-token.html)
+- [52. [v1] AI로 돈버는 방법](05-action/52-money.html)
 - [53. [v1] 개인이 오늘 저녁에 할 일](05-action/53-personal.html)
 - [54. 조직이 이번 주에 할 일](05-action/54-team.html)
 
 ### 부록 A. 실무 가이드
-- [A01. Claude Code 사용법](appendix-a/A01.html)
+- [A01. Claude Code 사용법과 꿀팁](appendix-a/A01.html)
 - [A02. 골든래빗 액션플랜](appendix-a/A02.html)
 
 ### 부록 C. 시맨틱 맵
-- [C01. 전체 요약](appendix-c/C01.html)
-- [C02. 시맨틱 앵커](appendix-c/C02.html)
+- [C01. 모든 Draft 핵심 요약 concat 통합](appendix-c/C01.html)
+- [C02. 컨텍스트 절약을 위한 시맨틱 앵커](appendix-c/C02.html)
 
 ---
 

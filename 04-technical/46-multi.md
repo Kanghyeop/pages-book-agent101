@@ -1,5 +1,5 @@
 ---
-title: "46. [v1] 멀티에이전트 구성 패턴"
+title: "46. [v1] 멀티 에이전트 구성 패턴"
 nav_order: 6
 parent: Part 4
 ---
