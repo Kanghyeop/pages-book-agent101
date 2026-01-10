@@ -3,7 +3,6 @@
 (function() {
   'use strict';
 
-  // 페이지 로드 완료 후 실행
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
@@ -11,70 +10,65 @@
   }
 
   function init() {
-    // 약간의 지연 후 실행 (Just the Docs 동적 로딩 대기)
     setTimeout(createPrevNextNav, 100);
   }
 
   function createPrevNextNav() {
-    // 이미 생성되었으면 스킵
-    if (document.querySelector('.nav-footer')) {
-      return;
-    }
+    if (document.querySelector('.nav-footer')) return;
+    if (window.location.pathname.endsWith('/')) return;
 
-    // 인덱스 페이지(슬래시로 끝남)에서는 네비게이션 생성하지 않음
-    if (window.location.pathname.endsWith('/')) {
-      return;
-    }
-
-    // 사이드바에서 모든 링크 수집
-    var allLinks = document.querySelectorAll('.site-nav a[href]');
-    if (allLinks.length === 0) {
-      return;
-    }
-
-    // .html로 끝나는 콘텐츠 페이지만 필터링
+    // 사이드바에서 모든 .html 링크 수집
+    var allLinks = document.querySelectorAll('.site-nav a[href$=".html"]');
     var navLinks = [];
+    var seen = {};
+
     allLinks.forEach(function(link) {
       var href = link.getAttribute('href');
       var text = link.textContent.trim();
-
-      if (href &&
-          text &&
-          href.indexOf('#') !== 0 &&
-          href.indexOf('http') !== 0 &&
-          href.endsWith('.html')) {
-        navLinks.push({ href: href, title: text });
+      if (href && text && !seen[href]) {
+        seen[href] = true;
+        // 절대 경로로 변환
+        var a = document.createElement('a');
+        a.href = href;
+        navLinks.push({ href: a.pathname, title: text });
       }
     });
 
-    if (navLinks.length < 2) {
-      return;
-    }
-
-    // 중복 제거 (같은 href가 여러 번 나올 수 있음)
-    var seen = {};
-    navLinks = navLinks.filter(function(item) {
-      if (seen[item.href]) return false;
-      seen[item.href] = true;
-      return true;
-    });
-
-    // 현재 페이지 찾기
+    // 현재 페이지 경로
     var currentPath = window.location.pathname;
-    var currentIndex = -1;
 
+    // 현재 페이지가 navLinks에 없으면 추가 (Just the Docs는 현재 페이지를 텍스트로 표시)
+    var currentIndex = -1;
     for (var i = 0; i < navLinks.length; i++) {
-      var a = document.createElement('a');
-      a.href = navLinks[i].href;
-      if (a.pathname === currentPath) {
+      if (navLinks[i].href === currentPath) {
         currentIndex = i;
         break;
       }
     }
 
+    // 현재 페이지를 찾지 못했으면, 삽입 위치 결정
     if (currentIndex === -1) {
-      return;
+      // 현재 페이지 제목 가져오기
+      var pageTitle = document.querySelector('h1');
+      var currentTitle = pageTitle ? pageTitle.textContent.trim() : '';
+
+      // 적절한 위치에 삽입 (경로 기준 정렬)
+      var inserted = false;
+      for (var i = 0; i < navLinks.length; i++) {
+        if (navLinks[i].href > currentPath) {
+          navLinks.splice(i, 0, { href: currentPath, title: currentTitle });
+          currentIndex = i;
+          inserted = true;
+          break;
+        }
+      }
+      if (!inserted) {
+        navLinks.push({ href: currentPath, title: currentTitle });
+        currentIndex = navLinks.length - 1;
+      }
     }
+
+    if (navLinks.length < 2 || currentIndex === -1) return;
 
     // 네비게이션 생성
     var nav = document.createElement('nav');
