@@ -17,7 +17,7 @@
     if (document.querySelector('.nav-footer')) return;
     if (window.location.pathname.endsWith('/')) return;
 
-    // 사이드바에서 모든 .html 링크 수집
+    /* 사이드바에서 모든 .html 링크 수집 */
     var allLinks = document.querySelectorAll('.site-nav a[href$=".html"]');
     var navLinks = [];
     var seen = {};
@@ -27,17 +27,17 @@
       var text = link.textContent.trim();
       if (href && text && !seen[href]) {
         seen[href] = true;
-        // 절대 경로로 변환
+        /* 절대 경로로 변환 */
         var a = document.createElement('a');
         a.href = href;
         navLinks.push({ href: a.pathname, title: text });
       }
     });
 
-    // 현재 페이지 경로
+    /* 현재 페이지 경로 */
     var currentPath = window.location.pathname;
 
-    // 현재 페이지가 navLinks에 없으면 추가 (Just the Docs는 현재 페이지를 텍스트로 표시)
+    /* 현재 페이지가 navLinks에 없으면 추가 (Just the Docs는 현재 페이지를 텍스트로 표시) */
     var currentIndex = -1;
     for (var i = 0; i < navLinks.length; i++) {
       if (navLinks[i].href === currentPath) {
@@ -46,13 +46,13 @@
       }
     }
 
-    // 현재 페이지를 찾지 못했으면, 삽입 위치 결정
+    /* 현재 페이지를 찾지 못했으면, 삽입 위치 결정 */
     if (currentIndex === -1) {
-      // 현재 페이지 제목 가져오기
+      /* 현재 페이지 제목 가져오기 */
       var pageTitle = document.querySelector('h1');
       var currentTitle = pageTitle ? pageTitle.textContent.trim() : '';
 
-      // 적절한 위치에 삽입 (경로 기준 정렬)
+      /* 적절한 위치에 삽입 (경로 기준 정렬) */
       var inserted = false;
       for (var i = 0; i < navLinks.length; i++) {
         if (navLinks[i].href > currentPath) {
@@ -70,11 +70,11 @@
 
     if (navLinks.length < 2 || currentIndex === -1) return;
 
-    // 네비게이션 생성
+    /* 네비게이션 생성 */
     var nav = document.createElement('nav');
     nav.className = 'nav-footer';
 
-    // 이전 버튼
+    /* 이전 버튼 */
     if (currentIndex > 0) {
       var prev = navLinks[currentIndex - 1];
       var prevLink = document.createElement('a');
@@ -86,12 +86,12 @@
       nav.appendChild(document.createElement('span'));
     }
 
-    // 스페이서
+    /* 스페이서 */
     var spacer = document.createElement('span');
     spacer.className = 'spacer';
     nav.appendChild(spacer);
 
-    // 다음 버튼
+    /* 다음 버튼 */
     if (currentIndex < navLinks.length - 1) {
       var next = navLinks[currentIndex + 1];
       var nextLink = document.createElement('a');
@@ -101,7 +101,7 @@
       nav.appendChild(nextLink);
     }
 
-    // 메인 컨텐츠에 추가
+    /* 메인 컨텐츠에 추가 */
     var mainContent = document.getElementById('main-content') ||
                       document.querySelector('.main-content') ||
                       document.querySelector('main');
