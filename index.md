@@ -13,13 +13,14 @@ nav_order: 0
 ## 목차
 
 ### Prologue
-- [01. [v1] 2년 뒤에도 유효한 판단 기준](00-prologue/01-prologue.html)
+- [01. [v1] 서문: 이 책이 쓰여진 이유](00-prologue/01-prologue.html)
+- [02. [v1] 압축본: 3분 미리보기](00-prologue/02-preview.html)
 
 ### Part 1. 필요한 이유
 - [11. [v1] 비용 구조가 바뀌면 조직이 바뀐다](01-why/11-evernote.html)
 - [12. [v1] 티켓이 상태를 따라 흐른다](01-why/12-ticket.html)
 - [13. [v1] 인간과 AI의 역할 분담](01-why/13-hitl.html)
-- [14. 같은 패턴, 다른 규모](01-why/14-pattern.html)
+- [14. [v1] 같은 패턴, 다른 규모](01-why/14-pattern.html)
 - [15. [v1] HITL에서 HOTL로 가는 길](01-why/15-hotl.html)
 - [16. [v1] 에이전트 시대의 세 가지 역할](01-why/16-mta.html)
 
@@ -68,8 +69,7 @@ nav_order: 0
 ### 부록 C: 시맨틱 맵
 - [C01. 전체 요약](appendix-c/C01.html)
 - [C02. 시맨틱 앵커](appendix-c/C02.html)
-- [C03. [v1] 프리뷰](appendix-c/C03.html)
-- [C04. [v1] 액션플랜 요약](appendix-c/C04.html)
+- [C03. [v1] 액션플랜 요약](appendix-c/C03.html)
 
 ---
 

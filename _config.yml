@@ -3,6 +3,10 @@ description: 비전공자도 쉽게 읽는 AI 에이전트 플레이북
 baseurl: "/pages-book-agent101"
 remote_theme: just-the-docs/just-the-docs
 
+# 네비게이션에서 제외
+exclude:
+  - assets/archive
+
 # Build settings
 markdown: kramdown
 plugins:
