@@ -1,5 +1,5 @@
 ---
-title: "같은 패턴, 다른 규모"
+title: "14. 같은 패턴, 다른 규모"
 nav_order: 4
 parent: Part 1
 ---

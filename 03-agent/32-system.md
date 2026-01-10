@@ -1,5 +1,5 @@
 ---
-title: "시스템으로 바라보기"
+title: "32. 시스템으로 바라보기"
 nav_order: 2
 parent: Part 3
 ---

@@ -1,5 +1,5 @@
 ---
-title: "[v1] 비용 구조가 바뀌면 조직이 바뀐다"
+title: "11. [v1] 비용 구조가 바뀌면 조직이 바뀐다"
 nav_order: 1
 parent: Part 1
 ---

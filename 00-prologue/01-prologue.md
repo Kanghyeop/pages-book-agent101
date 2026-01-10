@@ -1,5 +1,5 @@
 ---
-title: "[v1] 2년 뒤에도 유효한 판단 기준"
+title: "01. [v1] 2년 뒤에도 유효한 판단 기준"
 nav_order: 1
 parent: Prologue
 ---

@@ -1,5 +1,5 @@
 ---
-title: "모델 허브와 인프라"
+title: "27. 모델 허브와 인프라"
 nav_order: 7
 parent: Part 2
 ---

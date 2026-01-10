@@ -1,5 +1,5 @@
 ---
-title: "파운데이션 모델과 Task"
+title: "22. 파운데이션 모델과 Task"
 nav_order: 2
 parent: Part 2
 ---

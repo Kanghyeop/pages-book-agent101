@@ -1,5 +1,5 @@
 ---
-title: "토큰경제"
+title: "51. 토큰경제"
 nav_order: 1
 parent: Part 5
 ---

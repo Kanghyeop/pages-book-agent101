@@ -1,5 +1,5 @@
 ---
-title: "AI 프로덕트 분석"
+title: "23. AI 프로덕트 분석"
 nav_order: 3
 parent: Part 2
 ---

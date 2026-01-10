@@ -1,5 +1,5 @@
 ---
-title: "[v1] 지식 계층과 구조화"
+title: "44. [v1] 지식 계층과 구조화"
 nav_order: 4
 parent: Part 4
 ---

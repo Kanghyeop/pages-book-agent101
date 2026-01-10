@@ -1,5 +1,5 @@
 ---
-title: "조직이 이번 주에 할 일"
+title: "54. 조직이 이번 주에 할 일"
 nav_order: 4
 parent: Part 5
 ---

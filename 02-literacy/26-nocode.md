@@ -1,5 +1,5 @@
 ---
-title: "노코드 자동화 도구"
+title: "26. 노코드 자동화 도구"
 nav_order: 6
 parent: Part 2
 ---

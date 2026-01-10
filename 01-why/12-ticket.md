@@ -1,5 +1,5 @@
 ---
-title: "[v1] 티켓이 상태를 따라 흐른다"
+title: "12. [v1] 티켓이 상태를 따라 흐른다"
 nav_order: 2
 parent: Part 1
 ---

@@ -1,5 +1,5 @@
 ---
-title: "[v1] LangChain과 LangGraph 이해하기"
+title: "43. [v1] LangChain과 LangGraph 이해하기"
 nav_order: 3
 parent: Part 4
 ---

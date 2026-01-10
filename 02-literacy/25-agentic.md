@@ -1,5 +1,5 @@
 ---
-title: "에이전틱 모델과 개발자 도구"
+title: "25. 에이전틱 모델과 개발자 도구"
 nav_order: 5
 parent: Part 2
 ---

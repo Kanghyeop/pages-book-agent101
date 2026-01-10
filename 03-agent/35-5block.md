@@ -1,5 +1,5 @@
 ---
-title: "5블록 모델: 조직을 보는 렌즈"
+title: "35. 5블록 모델: 조직을 보는 렌즈"
 nav_order: 5
 parent: Part 3
 ---
