@@ -13,15 +13,15 @@ nav_order: 0
 ## 목차
 
 ### Prologue
-- [2년 뒤에도 유효한 판단 기준](00-prologue/01-prologue.html)
+- [[v1] 2년 뒤에도 유효한 판단 기준](00-prologue/01-prologue.html)
 
 ### Part 1. 필요한 이유
-- [비용 구조가 바뀌면 조직이 바뀐다](01-why/11-evernote.html)
-- [티켓이 상태를 따라 흐른다](01-why/12-ticket.html)
-- [인간과 AI의 역할 분담](01-why/13-hitl.html)
+- [[v1] 비용 구조가 바뀌면 조직이 바뀐다](01-why/11-evernote.html)
+- [[v1] 티켓이 상태를 따라 흐른다](01-why/12-ticket.html)
+- [[v1] 인간과 AI의 역할 분담](01-why/13-hitl.html)
 - [같은 패턴, 다른 규모](01-why/14-pattern.html)
-- [HITL에서 HOTL로 가는 길](01-why/15-hotl.html)
-- [에이전트 시대의 세 가지 역할](01-why/16-mta.html)
+- [[v1] HITL에서 HOTL로 가는 길](01-why/15-hotl.html)
+- [[v1] 에이전트 시대의 세 가지 역할](01-why/16-mta.html)
 
 ### Part 2. 배경지식 리터러시
 - [범용 어시스턴트](02-literacy/21-assistant.html)
@@ -33,22 +33,22 @@ nav_order: 0
 - [모델 허브와 인프라](02-literacy/27-hub.html)
 
 ### Part 3. 에이전트 시스템의 기획과 설계
-- [에이전트의 정의](03-agent/31-definition.html)
+- [[v1] 에이전트의 정의](03-agent/31-definition.html)
 - [시스템으로 바라보기](03-agent/32-system.html)
 - [에이전트의 다섯 가지 컴포넌트](03-agent/33-component.html)
 - [5블록 모델과 Execution의 가치](03-agent/34-execution.html)
 
 ### Part 4. 테크니컬 딥다이브
-- [시스템으로 바꾸는 첫 경험](04-technical/41-first.html)
+- [[v1] 시스템으로 바꾸는 첫 경험](04-technical/41-first.html)
 - [개념과 어휘 정립](04-technical/42-concept.html)
-- [LangChain과 LangGraph 이해하기](04-technical/43-langchain.html)
-- [지식 계층과 구조화](04-technical/44-knowledge.html)
+- [[v1] LangChain과 LangGraph 이해하기](04-technical/43-langchain.html)
+- [[v1] 지식 계층과 구조화](04-technical/44-knowledge.html)
 - [툴과 커넥터](04-technical/45-tool.html)
 - [멀티에이전트 구성 패턴](04-technical/46-multi.html)
 
 ### Part 5. 개인과 조직에 적용하기
 - [토큰경제](05-action/51-token.html)
-- [AI로 돈버는법](05-action/52-money.html)
+- [[v1] AI로 돈버는법](05-action/52-money.html)
 - [개인이 오늘 저녁에 할 일](05-action/53-personal.html)
 - [조직이 이번 주에 할 일](05-action/54-team.html)
 
@@ -68,8 +68,8 @@ nav_order: 0
 ### 부록 C: 시맨틱 맵
 - [전체 요약](appendix-c/C01.html)
 - [시맨틱 앵커](appendix-c/C02.html)
-- [프리뷰](appendix-c/C03.html)
-- [액션플랜 요약](appendix-c/C04.html)
+- [[v1] 프리뷰](appendix-c/C03.html)
+- [[v1] 액션플랜 요약](appendix-c/C04.html)
 
 ---
 

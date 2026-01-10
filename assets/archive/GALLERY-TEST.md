@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 # GALLERY.md 전수 테스트
 
 GALLERY.md의 모든 Mermaid 다이어그램을 순서대로 테스트합니다.

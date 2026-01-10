@@ -1,5 +1,5 @@
 ---
-title: "인간과 AI의 역할 분담"
+title: "[v1] 인간과 AI의 역할 분담"
 nav_order: 3
 parent: Part 1
 ---

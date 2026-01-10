@@ -1,5 +1,5 @@
 ---
-title: "에이전트 시대의 세 가지 역할"
+title: "[v1] 에이전트 시대의 세 가지 역할"
 nav_order: 6
 parent: Part 1
 ---
