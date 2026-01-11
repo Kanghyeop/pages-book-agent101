@@ -17,7 +17,7 @@ nav_order: 0
 - [02. [v1] 이 책이 쓰여진 이유](00-prologue/02-prologue.html) ✅
 
 ### Part 1. Why: 필요한 이유
-- [11. [v1] 성장과 고용이 분리되는 시대 (에버노트)](01-why/11-evernote.html)
+- [11. [v1] 성장과 고용이 분리되는 시대 (에버노트)](01-why/11-evernote.html) ✅
 - [12. [v1] 사람은 예외만 본다 (근조화환)](01-why/12-ticket.html) ✅
 - [13. [v1] HITL, 인간과 AI의 역할 분담](01-why/13-hitl.html)
 - [14. [v1] 세 가지 사례, 병목은 늘 같은 곳에서](01-why/14-pattern.html)
