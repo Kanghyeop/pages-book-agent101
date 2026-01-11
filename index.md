@@ -13,12 +13,12 @@ nav_order: 0
 ## 목차
 
 ### Prologue
-- [01. [v1] 책 전체를 3분에 압축하면](00-prologue/01-preview.html)
-- [02. [v1] 이 책이 쓰여진 이유](00-prologue/02-prologue.html)
+- [01. [v1] 책 전체를 3분에 압축하면](00-prologue/01-preview.html) ✅
+- [02. [v1] 이 책이 쓰여진 이유](00-prologue/02-prologue.html) ✅
 
 ### Part 1. Why: 필요한 이유
 - [11. [v1] 성장과 고용이 분리되는 시대 (에버노트)](01-why/11-evernote.html)
-- [12. [v1] 사람은 예외만 본다 (근조화환)](01-why/12-ticket.html)
+- [12. [v1] 사람은 예외만 본다 (근조화환)](01-why/12-ticket.html) ✅
 - [13. [v1] HITL, 인간과 AI의 역할 분담](01-why/13-hitl.html)
 - [14. [v1] 세 가지 사례, 병목은 늘 같은 곳에서](01-why/14-pattern.html)
 - [15. [v1] 전환을 위한 5단계 방법론](01-why/15-hotl.html)
@@ -37,11 +37,11 @@ nav_order: 0
 - [31. [v1] 에이전트의 정의](03-agent/31-definition.html)
 - [32. 시스템 사고의 첫걸음](03-agent/32-system.html)
 - [33. 에이전트 내부 다섯 구성요소](03-agent/33-component.html)
-- [34. [v1] 두가지 스타트업 비교: 안전 vs 경험](03-agent/34-startup.html)
+- [34. [v1] 두가지 스타트업 비교: 안전 vs 경험](03-agent/34-startup.html) ✅
 - [35. 5블록 모델: 조직을 보는 렌즈](03-agent/35-5block.html)
 
 ### Part 4. Technical: 테크니컬 딥다이브
-- [41. [v1] 시스템으로 바꾸는 첫 경험 (간호사 번표)](04-technical/41-first.html)
+- [41. [v1] 시스템으로 바꾸는 첫 경험 (간호사 번표)](04-technical/41-first.html) ✅
 - [42. 개발자와 대화하기 위한 어휘](04-technical/42-concept.html)
 - [43. [v1] LangChain과 LangGraph? (근조화환)](04-technical/43-langchain.html)
 - [44. [v1] 기억, 메모리와 RAG](04-technical/44-knowledge.html)
@@ -50,13 +50,13 @@ nav_order: 0
 
 ### Part 5. Action: 개인과 조직에 적용하기
 - [51. 토큰 경제 = 에이전트의 재무회계](05-action/51-token.html)
-- [52. [v1] AI로 돈버는 방법](05-action/52-money.html)
-- [53. [v1] 개인이 오늘 저녁에 할 일](05-action/53-personal.html)
+- [52. [v1] AI로 돈버는 방법](05-action/52-money.html) ✅
+- [53. [v1] 개인이 오늘 저녁에 할 일](05-action/53-personal.html) ✅
 - [54. 조직이 이번 주에 할 일](05-action/54-team.html)
 
 ### 부록 A. 실무 가이드
 - [A01. Claude Code 사용법과 꿀팁](appendix-a/A01.html)
-- [A02. 골든래빗 액션플랜](appendix-a/A02.html)
+- [A02. 골든래빗 액션플랜](appendix-a/A02.html) ✅
 
 ### 부록 C. 시맨틱 맵
 - [C01. 모든 Draft 핵심 요약 concat 통합](appendix-c/C01.html)
@@ -64,4 +64,4 @@ nav_order: 0
 
 ---
 
-최종 업데이트: 2026-01-10
+최종 업데이트: 2026-01-11
