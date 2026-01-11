@@ -55,7 +55,7 @@ nav_order: 0
 - [54. 조직이 이번 주에 할 일](05-action/54-team.html)
 
 ### 부록 A. 실무 가이드
-- [A01. TBD](appendix-a/A01.html)
+- [A01. Claude Code 사용법과 꿀팁](appendix-a/A01.html)
 - [A02. 골든래빗 액션플랜](appendix-a/A02.html) ✅
 
 ### 부록 C. 시맨틱 맵
