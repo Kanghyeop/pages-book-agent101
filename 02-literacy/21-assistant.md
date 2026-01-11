@@ -4,7 +4,7 @@ nav_order: 1
 parent: Part 2
 ---
 
- # 범용 어시스턴트: 모델과 서비스의 구분
+# 질문-답변에서 목표-자율로
 
 우리가 매일 쓰는 ChatGPT, Claude, Gemini. 이것들은 무엇일까요?
 
