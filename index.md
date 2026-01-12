@@ -62,6 +62,9 @@ nav_order: 0
 - [C01. 모든 Draft 핵심 요약 concat 통합](appendix-c/C01.html)
 - [C02. 컨텍스트 절약을 위한 시맨틱 앵커](appendix-c/C02.html)
 
+### 부록 D. 재구성 계획
+- [D01. Chapter1,5 재구성 계획](appendix-d/D01.html)
+
 ---
 
 최종 업데이트: 2026-01-12
