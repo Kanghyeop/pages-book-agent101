@@ -64,6 +64,7 @@ nav_order: 0
 
 ### 부록 D. 재구성 계획
 - [D01. Chapter1,5 재구성 계획](appendix-d/D01.html)
+- [D02. 현재 고민 상태](appendix-d/D02.html)
 
 ---
 
