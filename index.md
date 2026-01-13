@@ -68,8 +68,8 @@ nav_order: 0
 - [D03. 6개 핵심 프레임워크](appendix-d/D03.html)
 - [F01. AI Evolution Ladder](appendix-d/F01.html) ✅
 - [F02. SW Ecosystem](appendix-d/F02.html) ✅
-- [F03. 에이전트의 학문적 정의와 스펙트럼](appendix-d/F03.html) ✅
-- [F05. 에이전트 기술 스택 입문](appendix-d/F05.html)
+- [F03. Agent Spectrum](appendix-d/F03.html) ✅
+- [F05. Tech Stack 5L](appendix-d/F05.html)
 
 ---
 
