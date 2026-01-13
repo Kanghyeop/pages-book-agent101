@@ -69,6 +69,7 @@ nav_order: 0
 - [F01. F01. AI Evolution Ladder](appendix-d/F01.html) ✅
 - [F02. F02. SW Ecosystem](appendix-d/F02.html) ✅
 - [F03. F03. 에이전트의 학문적 정의와 스펙트럼](appendix-d/F03.html) ✅
+- [F05. F05. 에이전트 기술 스택 입문](appendix-d/F05.html)
 
 ---
 
