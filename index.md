@@ -66,9 +66,9 @@ nav_order: 0
 - [D01. Chapter1,5 재구성 계획](appendix-d/D01.html)
 - [D02. Part 2,3,4 재구성을 위한 고민들](appendix-d/D02.html)
 - [D03. 6개 핵심 프레임워크](appendix-d/D03.html)
-- [D04. F01. AI Evolution Ladder](appendix-d/D04.html) ✅
-- [D05. F02. SW Ecosystem](appendix-d/D05.html) ✅
-- [D06. 에이전트의 학문적 정의와 스펙트럼](appendix-d/D06.html) ✅
+- [F01. F01. AI Evolution Ladder](appendix-d/F01.html) ✅
+- [F02. F02. SW Ecosystem](appendix-d/F02.html) ✅
+- [F03. F03. 에이전트의 학문적 정의와 스펙트럼](appendix-d/F03.html) ✅
 
 ---
 
