@@ -6,4 +6,4 @@ has_children: true
 
 # 부록 D
 
-재구성 계획
+재구성 계획 + 프레임워크
