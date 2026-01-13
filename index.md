@@ -34,9 +34,9 @@ nav_order: 0
 - [27. 개발자들의 모델 허브와 인프라](02-literacy/27-hub.html)
 
 ### Part 3. Agent: 에이전트 시스템의 기획과 설계
-- [31. [v1] 에이전트의 정의](03-agent/31-definition.html)
+- [31. [v1] 에이전트의 정의](03-agent/31-definition.html) ❌
 - [32. 시스템 사고의 첫걸음](03-agent/32-system.html)
-- [33. 에이전트 내부 다섯 구성요소](03-agent/33-component.html)
+- [33. 에이전트 내부 다섯 구성요소](03-agent/33-component.html) ❌
 - [34. [v1] 두가지 스타트업 비교: 안전 vs 경험](03-agent/34-startup.html) ✅
 - [35. 5블록 모델: 조직을 보는 렌즈](03-agent/35-5block.html)
 
@@ -46,7 +46,7 @@ nav_order: 0
 - [43. [v1] LangChain과 LangGraph? (근조화환)](04-technical/43-langchain.html)
 - [44. [v1] 기억, 메모리와 RAG](04-technical/44-knowledge.html)
 - [45. 손과 발, 툴과 커넥터](04-technical/45-tool.html)
-- [46. [v1] 멀티 에이전트 구성 패턴](04-technical/46-multi.html)
+- [46. [v1] 멀티 에이전트 구성 패턴](04-technical/46-multi.html) ❌
 
 ### Part 5. Action: 개인과 조직에 적용하기
 - [51. 토큰 경제 = 에이전트의 재무회계](05-action/51-token.html)
@@ -69,7 +69,8 @@ nav_order: 0
 - [F01. AI Evolution Ladder](appendix-d/F01.html) ✅
 - [F02. SW Ecosystem](appendix-d/F02.html) ✅
 - [F03. Agent Spectrum](appendix-d/F03.html) ✅
-- [F05. Tech Stack 5L](appendix-d/F05.html)
+- [F05. Tech Stack 5L](appendix-d/F05.html) ✅
+- [F06. MAS Patterns](appendix-d/F06.html) ✅
 
 ---
 
