@@ -70,6 +70,8 @@ nav_order: 0
 - [F02. SW Ecosystem](appendix-d/F02.html) ✅
 - [F03. Agent Spectrum](appendix-d/F03.html) ✅
 - [F04. Org 5-Block](appendix-d/F04.html) ✅
+- [F04-1. 5Block 실무적용 가이드](appendix-d/F04-1.html)
+- [F04-2. 도메인 AI 스타트업 5Block 분석](appendix-d/F04-2.html)
 - [F05. Tech Stack 5L](appendix-d/F05.html) ✅
 - [F06. MAS Patterns](appendix-d/F06.html) ✅
 
