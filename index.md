@@ -57,6 +57,7 @@ nav_order: 0
 ### 부록 A. 실무 가이드
 - [A01. Claude Code 사용법과 꿀팁](appendix-a/A01.html)
 - [A02. 골든래빗 액션플랜](appendix-a/A02.html) ✅
+- [A03. Claude Code 실전 가이드 - 토마토 시뮬레이터](appendix-a/A03.html)
 
 ### 부록 C. 시맨틱 맵
 - [C01. 모든 Draft 핵심 요약 concat 통합](appendix-c/C01.html)
@@ -77,4 +78,4 @@ nav_order: 0
 
 ---
 
-최종 업데이트: 2026-01-15
+최종 업데이트: 2026-01-19
