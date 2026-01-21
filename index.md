@@ -59,6 +59,7 @@ nav_order: 0
 - [A02. 골든래빗 액션플랜](appendix-a/A02.html) ✅
 - [A03. Claude Code 실전 가이드 - 토마토 시뮬레이터](appendix-a/A03.html)
 - [A04. 조직 AI 도입 방법론](appendix-a/A04.html)
+- [A05. 세탁설비 사례 연구](appendix-a/A05.html)
 
 ### 부록 C. 시맨틱 맵
 - [C01. 모든 Draft 핵심 요약 concat 통합](appendix-c/C01.html)
